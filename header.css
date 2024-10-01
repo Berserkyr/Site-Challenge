@@ -1,0 +1,290 @@
+/* Import des polices et des plugins Tailwind CSS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://cdn.tailwindcss.com?plugins=forms,typography');
+@import url('https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js');
+
+/* Réinitialisation des styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+max-height: 500px;
+}
+/* Gradient de fond */
+.bg-gradient-to-r {
+    background: linear-gradient(to right, var(--from), var(--to));
+}
+
+/* Couleur de départ */
+.from-black {
+    --from: black;
+}
+
+/* Couleur de fin */
+.to-zinc-900 {
+    --to: black;
+}
+
+/* Texte blanc */
+.text-white {
+    color: white;
+}
+
+/* Espacement vertical */
+.py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Conteneur avec largeur maximale */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Centrage horizontal */
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Affichage en ligne */
+.flex {
+    display: flex;
+}
+
+/* Alignement vertical */
+.items-center {
+    align-items: center;
+}
+
+/* Justification entre les éléments */
+.justify-between {
+    justify-content: space-between;
+}
+
+/* Espacement horizontal pour enfants non masqués */
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    --space-x-reverse: 0;
+    margin-right: calc(1rem * var(--space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--space-x-reverse)));
+}
+
+/* Espacement horizontal pour enfants non masqués avec espacement plus grand */
+.space-x-6 > :not([hidden]) ~ :not([hidden]) {
+    --space-x-reverse: 0;
+    margin-right: calc(1.5rem * var(--space-x-reverse));
+    margin-left: calc(1.5rem * calc(1 - var(--space-x-reverse)));
+}
+
+/* Logo avec largeur fixe */
+.logo {
+    width: 200px;
+}
+
+/* Texte de taille 2XL */
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+/* Gras */
+.font-bold {
+    font-weight: 700;
+}
+
+/* Espacement des lettres large */
+.tracking-wide {
+    letter-spacing: 0.05em;
+}
+
+/* Éléments cachés */
+.hidden {
+    display: none;
+}
+
+/* Affichage en ligne pour les écrans moyens */
+.md\:flex {
+    display: flex;
+}
+
+/* Éléments cachés pour les écrans moyens */
+.md\:hidden {
+    display: none;
+}
+
+/* Texte de couleur zinc 400 */
+.text-zinc-400 {
+    color: #a1a1aa;
+}
+
+/* Texte de couleur zinc 400 au survol */
+.hover\:text-zinc-400:hover {
+    color: #a1a1aa;
+}
+
+/* Transition de 300 millisecondes */
+.transition {
+    transition: all 0.3s ease;
+}
+
+/* Durée de la transition de 300 millisecondes */
+.duration-300 {
+    transition-duration: 300ms;
+}
+
+/* Position relative */
+.relative {
+    position: relative;
+}
+
+/* Largeur de 6 */
+.w-6 {
+    width: 1.5rem;
+}
+
+/* Hauteur de 6 */
+.h-6 {
+    height: 1.5rem;
+}
+
+/* Position absolue en haut */
+.absolute {
+    position: absolute;
+}
+
+/* En haut à 0 */
+.top-0 {
+    top: 0;
+}
+
+/* À droite à 0 */
+.right-0 {
+    right: 0;
+}
+
+/* Couleur de fond rouge 600 */
+.bg-red-600 {
+    background-color: #dc2626;
+}
+
+/* Texte de taille extra petite */
+.text-xs {
+    font-size: 0.75rem;
+}
+
+/* Coins arrondis complets */
+.rounded-full {
+    border-radius: 9999px;
+}
+
+/* Remplissage horizontal de 1 */
+.px-1 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+
+/* Couleur de fond zinc 800 */
+.bg-zinc-800 {
+    background-color: #27272a;
+}
+
+/* Fond zinc 700 au survol */
+.hover\:bg-zinc-700:hover {
+    background-color: #3f3f46;
+}
+
+/* Remplissage de 2 */
+.p-2 {
+    padding: 0.5rem;
+}
+
+/* Ombre de grande taille */
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Aucun soulignement */
+.no-underline {
+    text-decoration: none;
+}
+
+/* Bouton de connexion avec affichage en ligne, alignement des éléments centré, couleur de fond, couleur de texte, remplissage, coins arrondis, transition */
+.login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e222d;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    transition: background-color 0.3s ease;
+}
+
+/* Changement de couleur de fond du bouton de connexion au survol */
+.login-button:hover {
+    background-color: #3b82f6;
+}
+
+/* Affichage de groupe au survol */
+.group:hover .group-hover\:block {
+    display: block;
+}
+
+/* Lien de panier avec affichage en ligne et position relative */
+.shopping-cart-link {
+    display: inline-block;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Icône de panier */
+.shopping-cart-icon {
+    width: 100%;
+    height: 100%;
+    background-image: url('images/panier.png'); /* Chemin vers l'image de l'icône de panier blanche */
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease;
+    position: relative; /* Ajout pour empêcher le badge de déborder */
+}
+
+/* Badge du panier */
+.shopping-cart-badge {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    background-color: #dc2626;
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.25rem;
+    border-radius: 9999px;
+    transition: background-color 0.3s ease;
+}
+
+/* Changement de couleur de fond du badge au survol */
+.shopping-cart-link:hover .shopping-cart-badge {
+    background-color: #3b82f6; /* Bleu au survol */
+}
+
+/* Changement d'image de l'icône de panier lors du survol */
+.shopping-cart-link:hover .shopping-cart-icon {
+    background-image: url('images/panierbleu.png'); /* Chemin vers l'image de l'icône de panier bleue au survol */
+    cursor: pointer;
+}
+
+/* Texte plus grand pour les onglets */
+.nav-link {
+    font-size: 1.05rem; /* Taille de police augmentée */
+    font-weight: 400; /* Poids de police augmenté */
+    transition: color 0.3s ease; /* Transition de couleur */
+}
+
+/* Changement de couleur au survol */
+.nav-link:hover {
+    color: #3b82f6; /* Couleur bleue Tailwind 500 */
+}

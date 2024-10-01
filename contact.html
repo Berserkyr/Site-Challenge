@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<div class="contact-container">
+    <h2 class="contact-title">CONTACTEZ-NOUS</h2>
+    <p class="contact-description">Pour toute question, veuillez remplir ce formulaire ou discuter avec nous via le chat en bas à droite de votre écran.</p>
+
+    <form class="contact-form">
+        <input type="text" placeholder="Nom-Prénom" class="contact-input" required />
+        <input type="email" placeholder="Adresse email" class="contact-input" required />
+        <input type="text" placeholder="Objet" class="contact-input" required />
+        <textarea
+            placeholder="Saisissez votre message..."
+            class="contact-textarea"
+            rows="5"
+            required
+        ></textarea>
+        <button type="submit" class="contact-button">Envoyer votre message</button>
+    </form>
+
+    <div class="social-links">
+        <a href="#" class="social-link telegram">
+            <img aria-hidden="true" alt="telegram-icon" src="images/telegramme.png" class="icon" />
+            GROUPE TELEGRAM
+        </a>
+        <a href="#" class="social-link calendly">
+            <img aria-hidden="true" alt="calendly-icon" src="https://openui.fly.dev/openui/24x24.svg?text=📅" class="icon" />
+            CONTACT CALENDLY
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

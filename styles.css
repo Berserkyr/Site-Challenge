@@ -1,0 +1,2441 @@
+/* Styles globaux */
+/* Import des polices et des plugins Tailwind CSS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://cdn.tailwindcss.com?plugins=forms,typography');
+@import url('https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js');
+
+/* Réinitialisation des styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav .bg-gradient-to-r from-black to-zinc-900 text-white py-4 shadow-lg{
+  align-items: center;
+}
+.container mx-auto flex items-center justify-between{
+  padding: 1px;
+}
+/* Gradient de fond */
+.bg-gradient-to-r {
+    background: linear-gradient(to right, var(--from), var(--to));
+}
+
+/* Couleur de départ */
+.from-black {
+    --from: black;
+}
+
+/* Couleur de fin */
+.to-zinc-900 {
+    --to: black;
+}
+
+/* Texte blanc */
+.text-white {
+    color: white;
+}
+
+/* Espacement vertical */
+.py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Conteneur avec largeur maximale */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Centrage horizontal */
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Affichage en ligne */
+.flex {
+    display: flex;
+}
+
+/* Alignement vertical */
+.items-center {
+    align-items: center;
+}
+
+/* Justification entre les éléments */
+.justify-between {
+    justify-content: space-between;
+}
+
+/* Espacement horizontal pour enfants non masqués */
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    --space-x-reverse: 0;
+    margin-right: calc(1rem * var(--space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--space-x-reverse)));
+}
+
+/* Espacement horizontal pour enfants non masqués avec espacement plus grand */
+.space-x-6 > :not([hidden]) ~ :not([hidden]) {
+    --space-x-reverse: 0;
+    margin-right: calc(1.5rem * var(--space-x-reverse));
+    margin-left: calc(1.5rem * calc(1 - var(--space-x-reverse)));
+}
+
+/* Logo avec largeur fixe */
+.logo {
+    width: 200px;
+}
+
+/* Texte de taille 2XL */
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+/* Gras */
+.font-bold {
+    font-weight: 700;
+}
+
+/* Espacement des lettres large */
+.tracking-wide {
+    letter-spacing: 0.05em;
+}
+
+/* Éléments cachés */
+.hidden {
+    display: none;
+}
+
+/* Affichage en ligne pour les écrans moyens */
+.md\:flex {
+    display: flex;
+}
+
+/* Éléments cachés pour les écrans moyens */
+.md\:hidden {
+    display: none;
+}
+
+/* Texte de couleur zinc 400 */
+.text-zinc-400 {
+    color: #a1a1aa;
+}
+
+/* Texte de couleur zinc 400 au survol */
+.hover\:text-zinc-400:hover {
+    color: #a1a1aa;
+}
+
+/* Transition de 300 millisecondes */
+.transition {
+    transition: all 0.3s ease;
+}
+
+/* Durée de la transition de 300 millisecondes */
+.duration-300 {
+    transition-duration: 300ms;
+}
+
+/* Position relative */
+.relative {
+    position: relative;
+}
+
+/* Largeur de 6 */
+.w-6 {
+    width: 1.5rem;
+}
+
+/* Hauteur de 6 */
+.h-6 {
+    height: 1.5rem;
+}
+
+/* Position absolue en haut */
+.absolute {
+    position: absolute;
+}
+
+/* En haut à 0 */
+.top-0 {
+    top: 0;
+}
+
+/* À droite à 0 */
+.right-0 {
+    right: 0;
+}
+
+/* Couleur de fond rouge 600 */
+.bg-red-600 {
+    background-color: #dc2626;
+}
+
+/* Texte de taille extra petite */
+.text-xs {
+    font-size: 0.75rem;
+}
+
+/* Coins arrondis complets */
+.rounded-full {
+    border-radius: 9999px;
+}
+
+/* Remplissage horizontal de 1 */
+.px-1 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+
+/* Couleur de fond zinc 800 */
+.bg-zinc-800 {
+    background-color: #27272a;
+}
+
+/* Fond zinc 700 au survol */
+.hover\:bg-zinc-700:hover {
+    background-color: #3f3f46;
+}
+
+/* Remplissage de 2 */
+.p-2 {
+    padding: 0.5rem;
+}
+
+/* Ombre de grande taille */
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Aucun soulignement */
+.no-underline {
+    text-decoration: none;
+}
+
+/* Bouton de connexion avec affichage en ligne, alignement des éléments centré, couleur de fond, couleur de texte, remplissage, coins arrondis, transition */
+.login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e222d;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    transition: background-color 0.3s ease;
+}
+
+/* Changement de couleur de fond du bouton de connexion au survol */
+.login-button:hover {
+    background-color: #3b82f6;
+}
+
+/* Affichage de groupe au survol */
+.group:hover .group-hover\:block {
+    display: block;
+}
+
+/* Lien de panier avec affichage en ligne et position relative */
+.shopping-cart-link {
+    display: inline-block;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Icône de panier */
+.shopping-cart-icon {
+    width: 100%;
+    height: 100%;
+    background-image: url('images/panier.png'); /* Chemin vers l'image de l'icône de panier blanche */
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease;
+    position: relative; /* Ajout pour empêcher le badge de déborder */
+}
+
+/* Badge du panier */
+.shopping-cart-badge {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    background-color: #dc2626;
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.25rem;
+    border-radius: 9999px;
+    transition: background-color 0.3s ease;
+}
+
+/* Changement de couleur de fond du badge au survol */
+.shopping-cart-link:hover .shopping-cart-badge {
+    background-color: #3b82f6; /* Bleu au survol */
+}
+
+/* Changement d'image de l'icône de panier lors du survol */
+.shopping-cart-link:hover .shopping-cart-icon {
+    background-image: url('images/panierbleu.png'); /* Chemin vers l'image de l'icône de panier bleue au survol */
+    cursor: pointer;
+}
+
+/* Texte plus grand pour les onglets */
+.nav-link {
+    font-size: 1.05rem; /* Taille de police augmentée */
+    font-weight: 400; /* Poids de police augmenté */
+    transition: color 0.3s ease; /* Transition de couleur */
+}
+
+/* Changement de couleur au survol */
+.nav-link:hover {
+    color: #3b82f6; /* Couleur bleue Tailwind 500 */
+}
+
+
+html{
+  margin: auto;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #11365b, #03040f, #000000);
+    color: white;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+}
+
+.text-content {
+    max-width: 50%;
+    margin-bottom: 2rem;
+    width: 100%;
+    padding: 38px 50px 66px 50px;
+}
+
+@media (min-width: 768px) {
+    .text-content {
+        margin-bottom: 0;
+    }
+}
+
+.subtitle {
+    color: #1649FF;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 42px;
+    font-weight: 600;
+    margin: 0.5rem 0 1rem;
+    font-family: "Poppins", sans-serif;
+    color: #FFFFFF;
+    word-spacing: 0px;
+    white-space: nowrap;
+}
+
+.trustpilot {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.star {
+    margin-right: 0.5rem;
+}
+
+.rating {
+    color: #22c55e;
+}
+
+.description {
+    color: #FFFFFFB3;
+    margin-bottom: .9rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.primary-button {
+    font-size: 16px;
+    background-color: #1649FF;
+    color: var(--primary-foreground);
+    padding: 20px 40px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-out;
+    font-weight: 300;
+}
+
+.primary-button:hover {
+    transform: scale(1.1);
+    background-color: rgba(37, 37, 37, 0.8);
+}
+
+.secondary-button {
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    padding: 20px 40px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-out;
+}
+
+.secondary-button:hover {
+    background-color: #e4e4e4;
+}
+
+.image-content {
+    display: flex;
+    justify-content: center;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-out;
+}
+
+.image.enlarged {
+    transform: scale(1.2);
+}
+
+@media (min-width: 768px) {
+    .image {
+        margin-right: -5rem;
+    }
+}
+
+/* Styles ajoutés */
+.bg-background {
+    background-color: hsl(var(--background));
+}
+
+.text-foreground {
+    color: white;
+}
+
+.text-muted-foreground {
+    color: white;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.gap-6 {
+    gap: 1.5rem;
+    padding: 64px 32px 63px;
+    margin: 0px 24px 0px 0px;
+}
+
+.bg-card {
+    background-color: #111215;
+}
+
+.text-card-foreground {
+    color: white;
+}
+
+.rounded-lg {
+    border-radius: var(--radius);
+}
+
+.shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+.text-4xl {
+    font-size: 42px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+.text-muted-foreground {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+
+.bg-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 60px;
+    max-height: 60px;
+    border-radius: 50%;
+    padding: 12px;
+    background-color: blue;
+    transition: background-color 0.3s ease;
+    object-fit: contain;
+}
+
+.bg-card img:hover {
+    background-color: gray;
+    transform: scale(1.05);
+}
+
+.bg-card {
+  background-color: #111215;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.bg-card:hover {
+  transform: scale(1.05); /* Agrandir la carte */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ajouter une ombre plus prononcée */
+  border: 2px solid blue; /* Ajouter un contour bleu */
+}
+/* Light theme colors */
+.background-light {
+    background-color: #f7fafc;
+}
+
+.text-foreground-light {
+    color: #1a202c;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    width: 249.75px;
+    height: 567.4px;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.card-header {
+    background-color: #0243ff;
+    color: #ffffff;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.card-header h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.card-body {
+    padding: 1rem;
+    padding-top: calc(4rem + 1rem);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100% - 4rem);
+}
+
+.price-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 65px;
+    font-weight: 1000;
+    color: #1a202c;
+    margin: 0;
+}
+
+.challenge-description {
+    font-size: 1.125rem;
+    color: #555555;
+    margin-top: -15px;
+    margin-bottom: 0;
+}
+
+.primary-text {
+    color: #ffffff;
+    overflow-wrap: break-word;
+}
+
+.muted-text {
+    color: #333333;
+    overflow-wrap: break-word;
+}
+
+.secondary-bg {
+    background-color: #000000;
+    padding: 15px 30px;
+    border-radius: 30px;
+    color: white;
+}
+
+.secondary-text {
+    color: #1a202c;
+}
+
+.secondary-bg-hover {
+    background-color: #e9a872;
+}
+
+.text-green {
+    color: #48bb78;
+}
+
+.text-red {
+    color: #f56565;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.card-body ul li {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 8px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #000000;
+}
+
+.card-body ul li:last-child {
+    border-bottom: none;
+}
+
+.button-primary {
+    font-size: 16px;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-primary:hover {
+    background-color: var(--secondary);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+/* Les deux grosses cartes */
+.container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center horizontally */
+    padding: 2rem; /* Increase padding for more space around cards */
+    
+    min-height: 100vh; /* Ensure the container takes full viewport height */
+}
+
+@media (min-width: 768px) {
+    .container2 {
+        flex-direction: row;
+        gap: 2rem; /* Increase space between cards */
+    }
+}
+
+.card2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000;
+    padding: 2rem; /* Increased padding for more space inside cards */
+    border-radius: 2rem; /* Slightly rounded corners */
+    border: 1px solid var(--blue-500);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly more pronounced shadow */
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    flex: 1; /* Ensure both cards have equal size */
+    max-width: 500px; /* Reduced max width */
+    height: 600px; /* Increased height */
+    overflow: hidden; /* Ensure content does not spill out */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between content and button */
+    color: #FFFFFF; /* Couleur du texte en blanc */
+}
+
+@media (min-width: 768px) {
+    .card2 {
+        margin-bottom: 0;
+    }
+}
+
+.card2:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.card2 h2 {
+    font-size: 1.75rem; /* Increased font size */
+    font-weight: bold;
+    color: #FFFFFF; /* Texte en blanc pour le titre */
+    margin: 0.5rem 0; /* Added margin for spacing */
+    text-align: center; /* Center the heading text */
+}
+
+.time-required, .description {
+    color: #FFFFFF; /* Texte en blanc pour la description et le temps requis */
+    font-size: 1.1rem; /* Adjusted font size for better fit */
+    text-align: left; /* Center text within card */
+    margin: 0.5rem 0; /* Added margin for spacing */
+}
+
+.btn {
+    background-color: #d1eefb; /* Bleu ciel */
+    color: #000000; /* Texte en noir */
+    padding: 0.75rem 1.75rem; /* Adjusted padding for larger buttons */
+    border-radius: 1rem;
+    transition: background-color 0.3s;
+    margin: 0.5rem 0; /* Added margin between buttons */
+    border: none; /* Remove default button border */
+}
+
+.btn:hover {
+    background-color: #B0E0E6; /* Bleu ciel plus clair (au survol) */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 0.75rem; /* Gap between buttons */
+    margin-top: 1rem;
+}
+
+.icon2 {
+    width: 250px; /* Réduit la taille de l'icône */
+    height: auto;
+}
+
+
+/*3eme partie*/
+.container3 {
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    padding: 2rem;
+    max-width: 100vw; /* Étend le conteneur à la largeur de la vue */
+    margin: 0 auto; /* Centre le conteneur */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le contenu horizontalement */
+}
+
+.title3 {
+    font-size: 48px; /* text-3xl */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem; /* mb-8 */
+    width: 100%; /* Prend toute la largeur disponible */
+    max-width: 100%; /* Assure que le titre s'étend complètement */
+    box-sizing: border-box; /* Inclut le padding et les bordures dans la largeur totale */
+}
+
+.content3 {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
+    justify-content: space-evenly; /* Réduit l'espace entre les cartes en les espaçant également */
+    gap: 0.5rem; /* Réduit encore l'espace entre les cartes */
+    margin-bottom: 2rem; /* mb-8 */
+    width: 100%; /* Assure que le conteneur utilise toute la largeur disponible */
+    box-sizing: border-box; /* Inclut le padding et les bordures dans la largeur totale */
+}
+
+.card3 {
+    background-color: #111215;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px; /* Maintient une largeur maximale fixe */
+    flex: 1 1 calc(33% - 0.5rem); /* Augmente la largeur des cartes tout en réduisant l'espace entre elles */
+    display: flex; /* Utiliser flexbox pour aligner le contenu */
+    flex-direction: column; /* Aligne le contenu verticalement */
+    justify-content: space-between; /* Assure que le texte occupe l'espace disponible */
+    transition: transform 0.3s ease, border 0.3s ease; /* Ajoute une transition pour le contour */
+    box-sizing: border-box; /* Inclut le padding et les bordures dans la largeur totale */
+    border: 1px solid transparent; /* Définit une bordure transparente par défaut */
+}
+.card3:hover, .card3:focus {
+    transform: scale(1.05);
+    border-color: blue; /* Change la couleur de la bordure au survol */
+}
+
+
+  
+  /* Nouveau conteneur pour les icônes */
+  .icon-container {
+    background-color: blue; /* Couleur de fond bleue pour le cercle */
+    border-radius: 50%; /* Rend le conteneur circulaire */
+    padding: 0.25rem; /* Ajuste l'espace autour de l'icône */
+    display: inline-flex; /* Centre l'icône à l'intérieur du conteneur */
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem; /* Centre le conteneur et espace */
+    transition: transform 0.3s ease; /* Animation de la transformation */
+    width: 60px; /* Largeur fixe pour le cercle */
+    height: 60px; /* Hauteur fixe pour le cercle */
+  }
+  
+  .icon-container:hover, .icon-container:focus {
+    transform: scale(1.1);
+  }
+  
+  .icon3 {
+    max-width: 40px; /* Taille uniforme des icônes */
+    height: auto;
+    color: white; /* Change la couleur de l'icône si nécessaire */
+  }
+  
+  .card3-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem; /* Réduit l'espace entre le titre et le texte */
+}
+  
+.card3-text {
+    color: white;
+    flex-grow: 1; /* Permet au texte de prendre l'espace disponible */
+    margin-bottom: 0.5rem; /* Réduit l'espace avant la fin de la carte */
+}
+  
+  .portfolio-image {
+    background-color: transparent;
+    border-radius: 0.5rem;
+    max-width: 280px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .portfolio-image:hover, .portfolio-image:focus {
+    transform: scale(1.1);
+  }
+  
+  .subtitle3 {
+    font-size: 35px; /* Changer la taille de police à 32px */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+  
+  .contact3-info {
+    text-align: center;
+    color: var(--muted-foreground);
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact3-button {
+    text-align: center;
+    margin-top: 1rem;
+    background-color: #1649FF;
+    color: var(--secondary-foreground);
+    padding: 0.75rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    min-width: 200px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact3-button:hover, .contact3-button:focus {
+    background-color: rgba(var(--secondary-color), 0.8);
+  }
+  
+  .highlight3 {
+    color: blue; /* Appliquer la couleur bleue au texte avec la classe highlight3 */
+    font-weight: bold;
+}
+  
+.contact3-info p {
+    color: white; /* Changer la couleur du texte en blanc */
+    font-size: 20px; /* Définir la taille de la police à 25px */
+    margin: 0; /* Enlever les marges par défaut si nécessaire */
+    line-height: 1.4; /* Ajuster l'interligne pour une meilleure lisibilité */
+}
+
+
+/*partie 4*/
+  
+  .container4 {
+    color: #333;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .title4 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: center;
+    color: white;
+  }
+  
+  .subtitle4 {
+    color: white;
+    margin-bottom: 24px;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .grid4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    width: 100%;
+  }
+  
+  .card4 {
+    background-color: #f9f9f9;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .card4 img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .button4 {
+    text-align: center;
+    margin-top: 1rem;
+    background-color: #1649FF;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    min-width: 200px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    align-items: center;
+}
+
+.icon4 {
+    width: 20px; /* Ajustez la taille selon vos besoins */
+    height: 20px; /* Ajustez la taille selon vos besoins */
+    margin-right: 0.5rem; /* Espacement à droite */
+}
+
+.button4:hover {
+    transform: scale(1.1); /* Agrandit le bouton à 110% de sa taille originale */
+}
+  
+.fullscreen-viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.fullscreen-viewer img {
+    max-width: 95vw;
+    max-height: 95vh;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.fullscreen-viewer img.zoomed {
+    transform: scale(1.1);
+}
+
+.nav-button, .close-button {
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2.5rem;
+}
+
+
+.container5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: var(--foreground);
+  }
+  
+  .card5 {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 1024px;
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+  
+  .image-section5 {
+    padding: 16px;
+    width: 100%;
+    @media (min-width: 768px) {
+      width: 50%;
+    }
+  }
+  
+  .image5 {
+    width: auto;
+    height: 500px;
+    border-radius: 8px;
+    object-fit: cover;
+    padding-left: 55px;
+  }
+  
+  .content-section5 {
+    padding: 24px;
+    width: 100%;
+    @media (min-width: 768px) {
+      width: 50%;
+    }
+  }
+  
+  .amount5 {
+    font-size: 68px;
+    font-weight: bold;
+    color: #38a169; /* Tailwind green-500 */
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .subtitle5 {
+    font-size: 19px;
+    font-weight: 600;
+    margin-top: 8px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .description5 {
+    margin-top: 16px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+
+/*Partie 9*/
+
+.container6 {
+    background-color: var(--background-color);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .grid-6 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .grid-6 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .card6 {
+    background-color: var(--card-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  
+  .mt-6 {
+    margin-top: 1.5rem;
+  }
+  
+  .button-container6 {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  
+  .cta-button6{
+    text-align: center;
+    margin-top: 1rem;
+    background-color: #1649FF;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    min-width: 200px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    align-items: center;
+  }
+   
+  .grid-3 .card6 img {
+    width: 342px; /* Largeur personnalisée pour les trois premières images */
+    height: 342px; /* Hauteur personnalisée pour les trois premières images */
+  }
+  .grid-6 .card6 img {
+    width: 342px; /* Largeur personnalisée pour les autres images */
+    height: 139px; /* Hauteur personnalisée pour les autres images */
+  }
+  .grid-3, .grid-6 {
+    display: grid;
+    gap: 0.1rem;
+  }
+  .cta-button6:hover {
+    transform: scale(1.1); /* Agrandit le bouton à 110% de sa taille originale */
+}
+
+
+/*calendrier*/
+.container7 {
+    background-color: var(--background-color); /* Exemple de variable CSS */
+    color: var(--foreground-color); /* Exemple de variable CSS */
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .title7 {
+    font-size: 1.875rem; /* 3xl */
+    font-weight: bold;
+  }
+  
+  .highlight7 {
+    color: var(--blue-500); /* Exemple de variable CSS */
+  }
+  
+  .description7 {
+    margin-top: 1rem; /* mt-4 */
+    font-size: 1.125rem; /* lg */
+  }
+  
+/*SUITE*/
+/* Base styles for the container */
+.container8 {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure the layout doesn't wrap */
+    gap: 1rem;
+    justify-content: center; /* Center the container horizontally */
+    align-items: flex-start; /* Align items to the top of the container */
+    max-width: 1200px; /* Optional: limit the container width for better centering */
+    margin: 0 auto; /* Center the container in the viewport */
+    padding: 1rem; /* Optional: add padding around the container */
+  }
+  
+  /* Style for image section */
+  .image-section8 {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    width: 60%; /* Takes up 60% of the container width */
+    align-items: center; /* Center the content within this section */
+    padding-top: 50px;
+  }
+  
+  .image-gallery8 {
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(3, 97px); /* 3 columns, each 97px wide */
+    grid-auto-rows: 100px; /* Set rows height to 100px */
+    gap: 1rem; /* Space between images */
+    justify-content: center; /* Center the grid within the image section */
+  }
+  
+  .image-item8 {
+    width: 97px; /* Fixed width for images */
+    height: 100px; /* Fixed height for images */
+  }
+  
+  .card8 {
+    background-color: var(--card-bg);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%; /* Ensure the card fits within the image-item */
+    height: 100%; /* Ensure the card fits within the image-item */
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .card-img8 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the card area without distortion */
+    transition: transform 0.3s ease;
+  }
+
+  .card-img8:hover {
+    transform: scale(1.1); /* Agrandit l'image de 10% au survol */
+  }
+  
+  /* Style for additional image */
+  .additional-image8 {
+    margin-top: 1rem; /* Space between the grid and the additional image */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    transition: transform 0.3s ease;
+    border-radius: 0.5rem;
+  }
+  
+  .additional-img8 {
+    width: 480px; /* Fixed width for the additional image */
+    height: 140px; /* Fixed height for the additional image */
+    object-fit: cover; /* Ensure the image fits well */
+    transition: transform 0.3s ease;
+    border-radius: 0.5rem;
+  }
+  
+  .additional-img8:hover {
+    transform: scale(1.1); /* Agrandit l'image de 10% au survol */
+  }
+  /* Style for text content */
+  .text-content8 {
+    width: 40%; /* Takes up 40% of the container width */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align the text content to the start */
+  }
+  
+  .text-title8 {
+    font-size: 42px; /* Ajuste la taille du texte à 42px */
+    font-weight: bold;
+    color: var(--primary-color); /* Gardez la couleur existante ou modifiez-la si nécessaire */
+  }
+  
+  
+  .text-paragraph8 {
+    font-size: 16px; /* Définit la taille du texte à 16px */
+    color: #FFFFFF; /* Conserve la couleur existante */
+    margin: 0.5rem 0; /* Espacement entre les paragraphes */
+    text-align: left; /* Assure l'alignement à gauche */
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  
+  
+  .stats8 {
+    margin-top: 1rem;
+    display: flex; /* Use flexbox to align items horizontally */
+    gap: 2rem; /* Space between stats items */
+    justify-content: center; /* Center the stats horizontally */
+  }
+  
+  .stats-item8 {
+    display: flex;
+    flex-direction: column; /* Stack the number and text vertically */
+    align-items: center; /* Center items horizontally within each stats item */
+  }
+  
+  .stat-value8 {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 32px; /* Définit la taille des chiffres à 32px */
+    white-space: nowrap; /* Empêche le texte de se diviser en plusieurs lignes */
+  }
+  
+  
+  .stat-label8 {
+    font-size: 16px; /* Définit la taille du texte à 16px */
+    color: var(--muted-foreground);
+    white-space: nowrap; /* Empêche le texte de se diviser en plusieurs lignes */
+    text-align: center; /* Centre le texte sous les chiffres */
+    font-weight: bold;
+  }
+  
+  .highlight8 {
+    color: blue; /* Met en bleu les mots spécifiés */
+  }
+  
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .container8 {
+      flex-direction: column;
+      align-items: center; /* Center the container content on small screens */
+    }
+  
+    .image-section8 {
+      width: 100%; /* Full width on small screens */
+    }
+  
+    .image-gallery8 {
+      grid-template-columns: repeat(auto-fit, minmax(97px, 1fr)); /* Stack images vertically on small screens */
+      grid-auto-rows: auto; /* Allow rows height to adjust based on content */
+    }
+  
+    .additional-image8 {
+      margin-top: 1rem; /* Space above the additional image on small screens */
+      justify-content: center; /* Center the additional image on small screens */
+    }
+  
+    .additional-img8 {
+      width: 100%; /* Full width on small screens */
+      height: auto; /* Height adjusts based on aspect ratio */
+    }
+  
+    .text-content8 {
+      width: 100%; /* Full width on small screens */
+      align-items: center; /* Center the text content horizontally on small screens */
+      text-align: center; /* Center text on small screens */
+    }
+  
+    .stats8 {
+      flex-direction: column; /* Stack stats vertically on small screens */
+      gap: 1rem; /* Space between stats items on small screens */
+    }
+  }
+  .separator8 {
+    width: 1px;
+    background-color: #ccc; /* Color of the separator */
+    margin: 0 1rem; /* Space around the separator */
+    align-self: stretch; /* Make sure the line stretches vertically */
+  }
+  
+/*Partie Nos meilleurs experts francophones*/
+  .container9 {
+    padding: 2rem;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .subtitle9 {
+    font-size: 18px; /* Set font size for the subtitle */
+    color: white; /* Use the same foreground color */
+    text-align: center; /* Center align the subtitle */
+    margin-bottom: 1rem; /* Space below the subtitle */
+  }
+  
+  .title9 {
+    font-size: 42px; /* Increase font size for the title */
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  
+  .icons9 {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .icon-box9 {
+    background-color: #333333;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-box9 img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .experts9 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    word-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+    .experts9 {
+        flex-direction: row;
+        gap: 1.5rem; /* Spacing between expert cards */
+    }
+}
+
+.expert9 {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: left;
+  flex: 1;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  color: white;
+}
+
+.expert-image9 {
+    width: 100%; /* Make the image take the full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    display: block;
+}
+
+  
+.expert-name9 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+  
+.expert-role9 {
+  color: white;
+  font-size: 18px; /* Taille du texte pour les rôles */
+  font-weight: 200; /* Poids intermédiaire pour une meilleure distinction */
+  margin-bottom: 0.5rem; /* Espacement entre le rôle et la description */
+}
+
+.expert-description9 {
+  color: white;
+  font-size: 14px; /* Taille du texte pour la description */
+  line-height: 1.4; /* Espacement entre les lignes pour améliorer la lisibilité */
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*LE PACK INVEST*/
+
+.custom-card10 {
+  background: linear-gradient(to right, white, #f5f5f5);
+  padding: 2.5rem;
+  border-radius: 2rem; /* More rounded corners */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px; /* Adjust the max width to match the image proportions */
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .custom-card10 {
+    flex-direction: row;
+  }
+}
+
+.custom-image10 {
+  width: 600px;
+  height: 200px;
+  margin: 0.5rem;
+  border-radius: 1rem;
+}
+
+
+.custom-content10 {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .custom-content10 {
+    margin-left: 2.5rem;
+    margin-top: 0;
+    text-align: left;
+  }
+}
+
+.custom-subtitle10 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #3b82f6;
+  background-color: #e0f2fe;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+.custom-title10 {
+  font-size: 42px;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-top: 0.5rem;
+}
+
+.custom-description10 {
+  color: #4b5563;
+  font-size: 16px;
+  margin-top: 1rem;
+  max-width: 500px; /* Set a max width to keep the text tidy */
+  font-weight: 300;
+}
+
+.custom-cta-container10 {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.custom-cta-button10 {
+  background-color: #2563eb;
+  color: white;
+  font-size: 16px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px; /* Fully rounded button */
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.custom-cta-button10:hover {
+  background-color: #3b82f6;
+}
+
+
+/*Accessible et éducatif*/
+
+.titre11 {
+  margin-top: 50px;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container11 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 50px 20px;
+}
+
+.card11 {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.card11:hover {
+  transform: scale(1.05); /* Effet de gonflement */
+  border-color: #0066ff; /* Ajout d'un trait bleu */
+}
+
+.card11 img {
+  width: 48px;
+  height: 48px;
+  background-color: #0066ff;
+  border-radius: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.card11 img::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  background-color: #0066ff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.card11 h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card11 p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.btn11 {
+  margin-top: -30px;
+  background-color: #0066ff;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.button-container11 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+
+/*suite commentaire etc..*/
+
+.text-foreground {
+  color: #343a40; /* Exemple de couleur de texte */
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.text-center {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.text-3xl {
+  font-size: 2rem; /* Ancienne taille : 1.875rem, nouvelle taille : 32px (1rem = 16px, donc 2rem = 32px) */
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.text-primary {
+  color: #007bff; /* Exemple de couleur primaire */
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.space-x-4 {
+  margin-right: -1rem;
+}
+
+.space-x-4 > * + * {
+  margin-left: 1rem;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.video-frame {
+  width: 720px; /* Largeur de l'iframe */
+  height: 405px; /* Hauteur de l'iframe */
+  margin-bottom: 0.5rem;
+}
+
+.font-semibold {
+  font-weight: semibold;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.text-green-500 {
+  color: #28a745; /* Exemple de couleur verte */
+}
+
+.text-yellow-500 {
+  color: #ffc107; /* Exemple de couleur jaune */
+}
+
+.text-blue-500 {
+  color: #007bff; /* Exemple de couleur bleue */
+}
+
+.video-frame-lg {
+  width: 250px; /* Largeur de l'iframe */
+  height: 450px; /* Hauteur de l'iframe (ajustée pour être plus longue) */
+  margin-bottom: 0.5rem;
+}
+
+/* Styles pour le carrousel */
+/* Sections and General Styles */
+.testimonial-container {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.main-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.emphasized-text {
+  color: #007bff; /* Exemple de couleur primaire */
+}
+
+.rating-container {
+  display: flex;
+  justify-content: center;
+}
+
+.video-gallery-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.video-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-frame {
+  width: 250px;
+  height: 450px;
+  margin-bottom: 0.5rem;
+}
+
+/* Carousel Styles */
+.testimonial-carousel-wrapper {
+  position: relative;
+  max-width: 570px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 14px;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  padding: 0 20px;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.testimonial-content {
+  font-size: 1.1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+}
+
+.testimonial-author-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre les éléments horizontalement */
+  text-align: center; /* Centre le texte */
+  margin-top: 10px; /* Ajoute un peu d'espace au-dessus des images */
+}
+
+.author-name {
+  font-weight: semibold;
+  font-size: 0.875rem;
+  margin-bottom: 5px; /* Espace entre le prénom et l'image */
+}
+
+.author-image {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px; /* Assure que l'image est ronde */
+  object-fit: cover; /* Maintient l'intégrité de l'image tout en la redimensionnant */
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Rating Styles */
+.rating-section {
+  text-align: center;
+}
+
+.rating-text {
+  color: #28a745; /* Exemple de couleur verte */
+}
+
+.star-icons {
+  color: #ffc107; /* Exemple de couleur jaune */
+}
+
+.rating-source-text {
+  color: #007bff; /* Exemple de couleur bleue */
+}
+
+
+/*ONGLET QUESTION*/
+
+.container12 {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 100px;
+}
+
+.content12 {
+  width: 45%;
+  text-align: left;
+  margin-right: 5%;
+  padding-top: 100px;
+  padding-left: 100px;
+}
+
+.titre12 {
+  color: #fff;
+  font-size: 49px; /* Augmenter la taille du texte */
+}
+
+.titre12 span {
+  color: #0d6efd; /* Couleur bleue pour l'ampersand */
+}
+
+
+.text12 {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.cta-button12 {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.accordion12 {
+  width: 45%;
+}
+
+.accordion-item12{
+  margin-bottom: 15px; /* Séparation entre les onglets */
+  border-radius: 10px; /* Bord arrondi */
+  overflow: hidden;
+  background-color: #333;
+}
+
+.accordion-button12 {
+  background-color: #333;
+  color: #fff;
+  padding: 20px; /* Augmenter le padding pour rendre les onglets plus grands */
+  font-size: 1.2em; /* Augmenter la taille du texte pour rendre les onglets plus grands */
+  text-align: left;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+  border-radius: 10px; /* Assurer que les bords restent arrondis */
+  position: relative; /* Nécessaire pour positionner la flèche */
+  white-space: nowrap;
+}
+
+.accordion-button12::after {
+  content: '\25BC'; /* Unicode pour la flèche vers le bas */
+  font-size: 1.2em;
+  position: absolute;
+  right: 20px; /* Distance du bord droit */
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s;
+}
+.accordion-button12.active::after {
+  content: '\25B2'; /* Unicode pour la flèche vers le haut lorsque l'onglet est actif */
+}
+
+.accordion-button12.active {
+  background-color: #0d6efd; /* Couleur bleue pour l'état actif */                    
+}
+
+.accordion-content12 {
+  background-color: #444;
+  display: none;
+  padding: 15px; /* Réduit le padding pour une apparence plus compacte */
+  font-size: 0.9em; /* Réduit la taille du texte pour le rendre plus petit */
+  border-top: 1px solid #333;
+  border-radius: 0 0 10px 10px; /* Arrondir uniquement les coins inférieurs */
+  line-height: 1.6; /* Augmente l'interligne pour une meilleure lisibilité */
+}
+
+.accordion-content12 p {
+  margin: 0; /* Supprime les marges par défaut autour des paragraphes */
+  padding: 0; /* Supprime les espacements internes pour un alignement propre */
+}
+
+/*LA SUITE DES ONGLET QUESTION*/
+
+.container13 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px; /* Ajuster le padding global */
+}
+
+.accordion13 {
+  width: 40%; /* Augmenter la largeur des onglets */
+  display: flex;
+  flex-direction: column; /* Aligner les éléments en colonne */
+  padding-left: 100px;
+  padding-top: 70px;
+}
+
+.accordion-item13 {
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.accordion-button13 {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  font-size: 1.2em;
+  text-align: left;
+  width: 100%; /* Assure que le bouton occupe toute la largeur */
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+  border-radius: 10px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.accordion-button13.active {
+  background-color: #0d6efd; /* Couleur bleue pour l'état actif */
+}
+
+.accordion-button13::after {
+  content: '\25BC'; /* Unicode pour la flèche vers le bas */
+  font-size: 1.2em;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s;
+}
+
+.accordion-button13.active::after {
+  content: '\25B2'; /* Unicode pour la flèche vers le haut lorsque l'onglet est actif */
+}
+
+.accordion-content13 {
+  background-color: #444;
+  display: none;
+  padding: 15px;
+  font-size: 16px; /* Taille du texte des réponses */
+  color: #fff; /* Couleur du texte des réponses */
+  border-top: 1px solid #333;
+  border-radius: 0 0 10px 10px;
+  line-height: 1.6;
+}
+
+.accordion-content13 p {
+  margin: 0;
+  padding: 0;
+}
+
+.content13 {
+  width: 55%; /* Ajuster la largeur du contenu principal pour correspondre */
+  text-align: left;
+  padding-left: 100px; /* Réduire le padding pour ajuster l'espace */
+  padding-top: 70px;
+}
+
+.titre13 {
+  color: #fff;
+  font-size: 49px; /* Taille du texte */
+}
+
+.titre13 span {
+  color: #0d6efd; /* Couleur bleue pour l'ampersand */
+}
+
+.text13 {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.cta-button13 {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/*derniere partie onglet question*/
+
+.container14 {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 100px;
+}
+
+.content14 {
+  width: 45%;
+  text-align: left;
+  margin-right: 5%;
+  padding-top: 100px;
+  padding-left: 100px;
+}
+
+.titre14 {
+  color: #fff;
+  font-size: 49px; /* Augmenter la taille du texte */
+}
+
+.titre14 span {
+  color: #0d6efd; /* Couleur bleue pour l'ampersand */
+}
+
+
+.text14 {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.cta-button14 {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.accordion14 {
+  width: 45%;
+  padding-top: 120px;
+}
+
+.accordion-item14{
+  margin-bottom: 15px; /* Séparation entre les onglets */
+  border-radius: 10px; /* Bord arrondi */
+  overflow: hidden;
+  background-color: #333;
+}
+
+.accordion-button14 {
+  background-color: #333;
+  color: #fff;
+  padding: 20px; /* Augmenter le padding pour rendre les onglets plus grands */
+  font-size: 1.2em; /* Augmenter la taille du texte pour rendre les onglets plus grands */
+  text-align: left;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+  border-radius: 10px; /* Assurer que les bords restent arrondis */
+  position: relative; /* Nécessaire pour positionner la flèche */
+  white-space: nowrap;
+}
+
+.accordion-button14::after {
+  content: '\25BC'; /* Unicode pour la flèche vers le bas */
+  font-size: 1.2em;
+  position: absolute;
+  right: 20px; /* Distance du bord droit */
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s;
+}
+
+.accordion-button14.active::after {
+  content: '\25B2'; /* Unicode pour la flèche vers le haut lorsque l'onglet est actif */
+}
+
+.accordion-button14.active {
+  background-color: #0d6efd; /* Couleur bleue pour l'état actif */
+}
+
+.accordion-content14 {
+  background-color: #444;
+  display: none;
+  padding: 15px; /* Réduit le padding pour une apparence plus compacte */
+  font-size: 0.9em; /* Réduit la taille du texte pour le rendre plus petit */
+  border-top: 1px solid #333;
+  border-radius: 0 0 10px 10px; /* Arrondir uniquement les coins inférieurs */
+  line-height: 1.6; /* Augmente l'interligne pour une meilleure lisibilité */
+}
+
+.accordion-content14 p {
+  margin: 0; /* Supprime les marges par défaut autour des paragraphes */
+  padding: 0; /* Supprime les espacements internes pour un alignement propre */
+}
+
+
+/* Conteneur principal du footer */
+.footer-container {
+  background-color: #ffffff;
+  color: #333333; /* Gris foncé pour le texte du footer */
+  min-height: 100vh;
+  background: linear-gradient(to right, #11365b, #03040f, #000000); /* Remplacez par le chemin correct de votre image */
+  background-size: cover; /* Ajuste la taille de l'image pour couvrir tout le conteneur */
+  background-position: center; /* Centre l'image dans le conteneur */
+  padding: 20px;
+}
+p{
+  color:#ffffff;
+}
+/* Styles pour les grilles et les colonnes */
+.container20 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: 500px;
+}
+
+/* Styles pour la grille du footer */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem; /* Espacement entre les éléments de la grille */
+}
+
+/* Styles pour le texte à gauche */
+.footer-info {
+  width: 100%;
+  max-width: 600px; /* Ajustez la largeur maximale si nécessaire */
+  margin-right: auto; /* Aligne le texte à gauche */
+  margin-bottom: 2rem; /* Espacement sous le texte */
+}
+
+.footer-links-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Espacement entre les blocs de liens */
+  margin-bottom: 2rem; /* Espacement sous les liens */
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-links a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #333333; /* Couleur de fond pour les liens */
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.footer-links a:hover {
+  background-color: #555555; /* Couleur de fond pour les liens au survol */
+}
+
+/* Styles pour les badges */
+.review-badges {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.badge {
+  background-color: #4285f4; /* Bleu vif pour les badges */
+  color: #ffffff; /* Blanc pour le texte des badges */
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  margin: 0 0.25rem;
+}
+
+/* Styles pour les logos des prop firms */
+.footer-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Colonnes adaptatives avec une largeur minimale */
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.footer-logos .logo-card {
+  background-color: #222222; /* Gris foncé pour les modules */
+  padding: 1rem; /* Réduit le padding */
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 150px; /* Largeur maximale pour réduire la taille des cartes */
+  max-height: 150px; /* Hauteur maximale pour réduire la taille des cartes */
+}
+
+.footer-logos .logo-card img {
+  max-width: 80%; /* Ajuste la largeur des images */
+  max-height: 80%; /* Ajuste la hauteur des images */
+  margin-bottom: 0.5rem; /* Réduit l'espacement entre l'image et le bouton */
+}
+
+.footer-logos .discover-button {
+  background-color: #4285f4; /* Bleu vif pour les boutons */
+  color: #ffffff; /* Blanc pour le texte des boutons */
+  padding: 0.5rem 1rem; /* Réduit le padding des boutons */
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center; /* Centre le texte du bouton */
+  font-size: 0.75rem; /* Réduit la taille de la police du bouton */
+}
+
+.footer-logos .discover-button:hover {
+  background-color: #357ae8; /* Bleu légèrement plus foncé pour les boutons au survol */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre subtile */
+}
+
+/* Styles pour les icônes de réseaux sociaux */
+.social-media {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.social-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icons .social-icon {
+  background-color: #f0f0f0;
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons .social-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Styles pour les textes de petite taille */
+.disclaimer {
+  text-align: center;
+  color: #757575; /* Gris pour le texte principal */
+  margin: 2rem 0;
+  font-size: 0.875rem;
+}
+
+.footer-credits {
+  text-align: center;
+  color: #757575; /* Gris pour le texte principal */
+  font-size: 0.75rem;
+  margin: 2rem 0;
+}

@@ -1,0 +1,351 @@
+body {
+  background: linear-gradient(to right, #11365b, #03040f, #000000);
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  gap: 2rem; /* Adds space between the two sections */
+  background-color: var(--bg-background);
+  color: var(--text-foreground);
+}
+
+/* Video section styling */
+.video-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  max-width: 560px; /* Ensures the iframe doesn't get too wide */
+  max-height: 315px; /* Ensures the iframe doesn't get too tall */
+  border: none;
+}
+
+.video-link {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  background-color: var(--bg-muted);
+  color: var(--text-muted-foreground);
+  transition: background-color 0.2s;
+  margin-top: 1rem; /* Adds space below the iframe */
+}
+
+.video-link:hover {
+  background-color: rgba(var(--bg-muted-rgb), 0.8);
+}
+
+.youtube-icon {
+  margin-right: 0.5rem;
+}
+
+/* Text section styling */
+.text-section {
+  flex: 2;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.highlight {
+  color: var(--text-primary);
+}
+
+.description {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  color: white;
+}
+
+.list {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  color: white;
+}
+
+.list .icon {
+  color: var(--text-primary);
+  margin-right: 0.5rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.2s, background-color 0.2s;
+  color: white; /* Text color */
+  font-weight: bold;
+}
+
+.join-program {
+  background-color: #007bff; /* Blue color */
+}
+
+.join-program:hover {
+  background-color: #0056b3; /* Darker blue for hover effect */
+  transform: scale(1.1); /* Slightly enlarges the button on hover */
+}
+
+.login {
+  background-color: #0056b3; /* Darker blue color */
+}
+
+.login:hover {
+  background-color: #003d7a; /* Even darker blue for hover effect */
+  transform: scale(1.1); /* Slightly enlarges the button on hover */
+}
+
+/* Container styling */
+.container11 {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Étire les cartes pour qu'elles aient la même hauteur */
+  gap: 15px; /* Réduit l'espacement entre les cartes */
+  padding: 50px 20px;
+}
+
+/* Card styling */
+/* Styles communs pour toutes les cartes */
+.card11 {
+  background-color: #1a1a1a; /* Couleur de fond des cartes */
+  border-radius: 10px; /* Coins arrondis */
+  padding: 15px; /* Espacement interne */
+  width: 220px; /* Largeur des cartes */
+  height: 220px; /* Hauteur des cartes */
+  flex: 1; /* Permet aux cartes de s'étirer pour remplir l'espace */
+  text-align: center; /* Centre le texte horizontalement */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombre portée */
+  transition: transform 0.3s ease, border-color 0.3s ease; /* Transition des effets au survol */
+  border: 2px solid transparent; /* Bordure transparente pour l'effet de survol */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre le contenu */
+  justify-content: center; /* Centre le contenu */
+  overflow: hidden; /* Cache les débordements */
+}
+
+/* Effet au survol des cartes */
+.card11:hover {
+  transform: scale(1.05); /* Effet de zoom */
+  border-color: #0066ff; /* Bordure bleue au survol */
+}
+
+/* Styles des images dans les cartes */
+.card11 img {
+  width: 60px; /* Largeur de l'icône */
+  height: 60px; /* Hauteur de l'icône */
+  background-color: #0066ff; /* Couleur de fond pour l'icône */
+  border-radius: 50%; /* Forme circulaire */
+  padding: 12px; /* Espacement interne */
+  box-sizing: border-box;
+  margin: 0 auto 15px; /* Centre l'image et ajuste l'espace sous l'image */
+  position: relative;
+  z-index: 1; /* Assure que l'image est au-dessus du cercle de fond */
+}
+
+/* Cercle de fond pour les images */
+.card11 img::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px; /* Largeur du cercle de fond */
+  height: 80px; /* Hauteur du cercle de fond */
+  background-color: #0066ff; /* Couleur du cercle de fond */
+  border-radius: 50%; /* Forme circulaire */
+  transform: translate(-50%, -50%); /* Centre le cercle */
+  z-index: 0; /* Assure que le cercle est derrière l'image */
+}
+
+/* Styles des titres dans les cartes */
+.card11 h2 {
+  font-size: 16px; /* Taille du texte */
+  margin-bottom: 8px; /* Espace sous le titre */
+  color: #fff; /* Couleur du texte */
+}
+
+/* Styles des paragraphes dans les cartes */
+.card11 p {
+  font-size: 14px; /* Taille du texte */
+  line-height: 1.4; /* Hauteur de ligne */
+  color: #fff; /* Couleur du texte */
+}
+
+/* Styles pour les cartes de bénéfices */
+.benefits-container {
+  padding: 2rem; /* Padding de 2rem */
+}
+
+.benefits-title {
+  font-size: 1.5rem; /* Taille du texte */
+  font-weight: bold; /* Texte en gras */
+  color: #fff; /* Couleur du texte en blanc */
+  text-align: center; /* Centre le texte */
+  margin-bottom: 1.5rem; /* Espace sous le titre */
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Pour les petits écrans */
+  gap: 1.5rem; /* Espacement entre les cartes */
+}
+
+@media (min-width: 768px) {
+  .benefits-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes pour les écrans moyens et grands */
+  }
+}
+
+.benefit-card {
+  background-color: #1a1a1a; /* Couleur de fond pour les cartes de bénéfices */
+  padding: 1.5rem; /* Padding de 1.5rem */
+  border-radius: 0.5rem; /* Coins arrondis */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre portée */
+  position: relative; /* Position relative pour permettre le positionnement absolu des éléments enfants */
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute; /* Position absolue pour centrer l'icône */
+  top: -30px; /* Ajuste la position pour placer le cercle au-dessus du contenu de la carte */
+  left: 50%; /* Positionner horizontalement au milieu de la carte */
+  transform: translateX(-50%); /* Ajuste la position pour centrer parfaitement horizontalement */
+  background-color: #007bff; /* Couleur de fond bleue */
+  border-radius: 50%; /* Forme ronde */
+  width: 60px; /* Largeur du cercle */
+  height: 60px; /* Hauteur du cercle */
+  z-index: 1; /* Assure que le cercle est au-dessus du contenu de la carte */
+}
+
+.icon-container img {
+  width: 40px; /* Largeur réduite des icônes */
+  height: 40px; /* Hauteur réduite des icônes */
+  object-fit: contain; /* Ajuste l'image à l'intérieur du cercle sans déformation */
+}
+
+.benefit-description {
+  color: #fff; /* Couleur du texte en blanc */
+  margin-top: 2rem; /* Espace au-dessus de la description pour compenser l'espace pris par le cercle bleu */
+  text-align: center; /* Centre le texte sous l'icône */
+}
+
+.contact-container {
+  background-color: #1a1a1a; /* bg-background */
+  color: #E2E8F0; /* text-foreground */
+  padding: 32px; /* p-8 */
+  border-radius: 12px; /* rounded-lg */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* shadow-xl */
+  transition: transform 0.3s ease-in-out; /* transition-transform transform */
+}
+
+.contact-container:hover {
+  transform: scale(1.05); /* hover:scale-105 */
+}
+
+.contact-title {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 800; /* font-extrabold */
+  color: #3182CE; /* text-primary */
+  margin-bottom: 24px; /* mb-6 */
+  text-align: center;
+}
+
+.contact-description {
+  color: #A0AEC0; /* text-muted-foreground */
+  margin-bottom: 32px; /* mb-8 */
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* space-y-6 */
+}
+
+.contact-input, .contact-textarea {
+  width: 100%; /* w-full */
+  padding: 12px; /* p-3 */
+  border: 1px solid #4A5568; /* border-border */
+  border-radius: 8px; /* rounded-lg */
+  background-color: #2D3748;
+  color: #E2E8F0;
+  transition: all 0.2s ease-in-out; /* transition duration-200 */
+}
+
+.contact-input:focus, .contact-textarea:focus {
+  outline: none;
+  border-color: #63B3ED; /* focus:ring-ring */
+  box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.5);
+}
+
+.contact-button {
+  background-color: #3182CE; /* bg-primary */
+  color: #F7FAFC; /* text-primary-foreground */
+  padding: 12px; /* p-3 */
+  border: none;
+  border-radius: 8px; /* rounded-lg */
+  width: 100%; /* w-full */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out; /* transition duration-200 */
+}
+
+.contact-button:hover {
+  background-color: rgba(49, 130, 206, 0.8); /* hover:bg-primary/80 */
+}
+
+.social-links {
+  margin-top: 40px; /* mt-10 */
+  display: grid;
+  grid-template-columns: 1fr; /* grid-cols-1 */
+  gap: 24px; /* gap-6 */
+}
+
+@media (min-width: 768px) {
+  .social-links {
+      grid-template-columns: 1fr 1fr; /* md:grid-cols-2 */
+  }
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* p-5 */
+  border-radius: 12px; /* rounded-lg */
+  background-color: #4A5568; /* bg-card */
+  color: #F7FAFC; /* text-primary-foreground */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* shadow-lg */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* transition duration-200 */
+}
+
+.social-link:hover {
+  background-color: #2D3748; /* hover:bg-secondary */
+  color: #CBD5E0; /* hover:text-secondary-foreground */
+}
+
+.icon {
+  margin-right: 12px; /* mr-3 */
+  height: 50px;
+  width: 50px;
+}

@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #11365b, #03040f, #000000);
+    color: white;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures vertical centering */
+    text-align: left; /* Ensures text is aligned from left to right */
+}
+
+.container {
+    max-width: 1200px; /* Limits the width of the container for better readability */
+    padding: 1.5rem;
+    margin: 0 auto; /* Centers the container horizontally */
+}
+
+.heading-main {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center; /* Centers the main headings */
+}
+
+.intro, .description {
+    margin-bottom: 1rem;
+    text-align: left; /* Ensures text is aligned from left to right */
+    white-space: nowrap;
+}
+
+.subheading, .section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: center; /* Centers subheadings and section titles */
+    text-align: left;
+}
+
+.imgg {
+    display: block;
+    width: 740px;
+    height: 330px;
+    margin: 0 auto; /* Centers images horizontally */
+}
+
+.list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: left; /* Ensures list items align left */
+}
+
+.challenge-button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centers button horizontally */
+}
+
+.challenge-button:hover {
+    background-color: rgba(0, 123, 255, 0.8);
+}

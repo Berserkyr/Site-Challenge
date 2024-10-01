@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #11365b, #03040f, #000000);
+    color: white;
+    overflow-x: hidden;
+}
+
+.actualites-container {
+    padding: 1.5rem;
+}
+
+.actualites-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.actualites-description {
+    color: var(--muted-foreground);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.actualites-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .actualites-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .actualites-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.actualites-card {
+    background-color: white; /* Fond blanc pour les cartes */
+    color: black; /* Texte en noir pour le contraste */
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s; /* Transition pour l'ombre et l'échelle */
+}
+
+.actualites-card:hover {
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Gonflement de 5% au survol */
+}
+
+.actualites-card-img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.actualites-card-content {
+    padding: 1rem;
+}
+
+.actualites-card-title {
+    font-weight: 600;
+}
+
+.actualites-card-text,
+.actualites-card-date {
+    color: var(--muted-foreground);
+}
+
+.actualites-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center; /* Centrer les boutons horizontalement */
+    gap: 1rem; /* Espacement entre les boutons */
+}
+
+.action-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s; /* Transition douce pour les changements de couleur */
+    display: inline-block; /* Pour que le lien prenne la forme d'un bouton */
+    text-decoration: none; /* Supprimer la décoration de texte */
+    border: 1px solid white; /* Bordure transparente par défaut pour éviter des changements de mise en page */
+}
+
+/* Changement de couleur au survol */
+.action-btn:hover {
+    color: white; /* Couleur du texte au survol */
+}
+
+.action-btn.primary {
+    background-color: var(--primary); /* Couleur de fond pour le bouton primaire */
+    color: var(--primary-foreground); /* Couleur du texte pour le bouton primaire */
+}
+
+.action-btn.primary:hover {
+    background-color: darkorange; /* Couleur de fond au survol pour le bouton primaire */
+    color: white; /* Couleur du texte au survol pour le bouton primaire */
+}
+
+.action-btn.secondary {
+    background-color: var(--secondary); /* Couleur de fond pour le bouton secondaire */
+    color: var(--secondary-foreground); /* Couleur du texte pour le bouton secondaire */
+}
+
+.action-btn.secondary:hover {
+    background-color: darkorange; /* Couleur de fond au survol pour le bouton secondaire */
+    color: white; /* Couleur du texte au survol pour le bouton secondaire */
+}
+
+.action-btn.accent {
+    background-color: var(--accent); /* Couleur de fond pour le bouton accent */
+    color: var(--accent-foreground); /* Couleur du texte pour le bouton accent */
+}
+
+.action-btn.accent:hover {
+    background-color: darkorange; /* Couleur de fond au survol pour le bouton accent */
+    color: white; /* Couleur du texte au survol pour le bouton accent */
+}
+
+.action-btn.destructive {
+    background-color: var(--destructive); /* Couleur de fond pour le bouton destructif */
+    color: var(--destructive-foreground); /* Couleur du texte pour le bouton destructif */
+}
+
+.action-btn.destructive:hover {
+    background-color: darkorange; /* Couleur de fond au survol pour le bouton destructif */
+    color: white; /* Couleur du texte au survol pour le bouton destructif */
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: black;
+    text-decoration: none;
+}

@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+   
+    <!-- Tailwind CSS and Unlazy -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'fr', includedLanguages: 'en,es,de,it,fr'}, 'google_translate_element');
+      }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+  <nav class="bg-gradient-to-r from-black to-zinc-900 text-white py-4 shadow-lg">
+    <div class="container mx-auto flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+            <img src="images/Capture_d_ecran_2024-09-04_121004-removebg-preview.png" alt="logo" class="logo">
+        </div>
+        <div class="hidden md:flex space-x-6">
+            <a href="index.html" class="nav-link hover:text-blue-500">Accueil</a>
+            <a href="#" class="nav-link hover:text-blue-500">Challenges</a>
+            <a href="gestion.html" class="nav-link hover:text-blue-500">Gestion</a>
+            <a href="blog.html" class="nav-link hover:text-blue-500">Blog</a>
+            <div class="relative group">
+                <a href="#" class="nav-link flex items-center hover:text-blue-500">
+                    Partenariat
+                    <svg class="ml-1 w-4 h-4 fill-current text-white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 12L3 5h14z" />
+                    </svg>
+                </a>
+                <div class="absolute left-0 hidden w-32 pt-2 group-hover:block">
+                    <div class="bg-black text-white shadow-lg">
+                        <a href="#" class="block px-4 py-2 hover:bg-zinc-700">Inscription</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-zinc-700">Connexion</a>
+                    </div>
+                </div>
+            </div>
+            <div class="relative group">
+                <a href="#" class="nav-link flex items-center hover:text-blue-500">
+                    A Propos
+                    <svg class="ml-1 w-4 h-4 fill-current text-white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 12L3 5h14z" />
+                    </svg>
+                </a>
+                <div class="absolute left-0 hidden w-60 pt-2 group-hover:block">
+                    <div class="bg-black text-white shadow-lg">
+                        <a href="contact.html" class="block px-4 py-2 hover:bg-zinc-700">Contact</a>
+                        <a href="index.html" class="block px-4 py-2 hover:bg-zinc-700">Notre Équipe</a>
+                        <a href="index.html#retour" class="block px-4 py-2 hover:bg-zinc-700">Résultats</a>
+                        <a href="footer.html#proop" class="block px-4 py-2 hover:bg-zinc-700">Propfirms Recommandées</a>
+                        <a href="index.html#coach" class="block px-4 py-2 hover:bg-zinc-700">FAQ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4">
+            <a href="#" class="shopping-cart-link">
+                <div class="shopping-cart-icon">
+                    <span class="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full px-1">0</span>
+                </div>
+            </a>
+            <button class="login-button">
+                <img src="images/sign-in.png" alt="login-icon" class="w-6 h-6">
+            </button>
+        </div>
+    </div>
+</nav>
+
+<script src="script.js"></script>
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://fr.tradingview.com/" rel="noopener nofollow" target="_blank"></a></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+        {
+        "symbols": [
+            {
+            "proName": "FOREXCOM:SPXUSD",
+            "title": "S&P 500 Index"
+            },
+            {
+            "proName": "FOREXCOM:NSXUSD",
+            "title": "US 100 Cash CFD"
+            },
+            {
+            "proName": "FX_IDC:EURUSD",
+            "title": "EUR to USD"
+            },
+            {
+            "proName": "BITSTAMP:BTCUSD",
+            "title": "Bitcoin"
+            },
+            {
+            "proName": "BITSTAMP:ETHUSD",
+            "title": "Ethereum"
+            }
+        ],
+        "showSymbolLogo": true,
+        "isTransparent": false,
+        "displayMode": "adaptive",
+        "colorTheme": "dark",
+        "locale": "fr"
+        }
+        </script>
+    </div>
+    <div id="google_translate_element" style="float: right; padding: 10px;"></div> 
+    <!-- TradingView Widget END -->
+    <div class="container">
+        <div class="text-content">
+            <h2 class="subtitle">Depuis 2017</h2>
+            <h1 class="title">Nous validons vos challenges<br> jusqu'à 500 000$ sur les<br> meilleurs prop firms : FTMO,<br> Wegetfunded, Apex...</h1>
+            <div class="trustpilot">
+                <img src="images/pngwing.com.png" alt="star" class="star">
+                <span class="rating">4 sur Trustpilot</span>
+            </div>
+            <p class="description">Vous rêvez de trader avec des capitaux importants sans<br> prendre de risque ? Validez vos challenges sur les<br> meilleures Prop Firms.</p>
+            <p class="description">Confiez nous vos challenges et comptes pour accéder à<br> des fonds de trading allant <span style="color: white;">jusqu'à 400 000 $.</span></p>
+            <div class="buttons">
+                <button onclick="document.getElementById('section1').scrollIntoView();" class="primary-button">Passez votre challenge</button>
+                <a href="https://t.me/propfirmfrance" class="secondary-button">Rejoindre notre canal</a>
+
+            </div>
+        </div>
+        <div class="image-content">
+            <img src="images/telephone.png" alt="Smartphone displaying trading app" class="image">
+        </div>
+    </div>
+
+    <!-- Nouveau contenu -->
+    <div class="bg-background text-foreground p-8">
+        <div class="text-center mb-8">
+            <h1 id="section1" class="text-4xl font-bold">Nous validons votre challenge Prop Firm !</h1>
+            <p class="text-muted-foreground">(Temps requis pour commencer : 5 min)</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-card text-card-foreground p-6 rounded-lg shadow-md">
+                <div class="flex justify-center mb-4">
+                    <img src="images/trier-par-ordre-croissant.png" alt="Choose Size Icon" />
+                </div>
+                <h2 class="text-xl font-semibold text-center mb-2">Choisir La Taille</h2>
+                <p class="text-center text-muted-foreground">Une fois la taille de votre challenge déterminée (5k$ à 400k$ maximum), vous pouvez payer notre service de validation ci-dessous.</p>
+            </div>
+            <div class="bg-card text-card-foreground p-6 rounded-lg shadow-md">
+                <div class="flex justify-center mb-4">
+                    <img src="images/carte-de-credit.png" alt="Payment Icon" />
+                </div>
+                <h2 class="text-xl font-semibold text-center mb-2">Paiement Du Service</h2>
+                <p class="text-center text-muted-foreground">Une fois votre paiement confirmé (par CB ou Crypto), vous serez dirigé vers notre support pour prendre votre challenge prop firm.</p>
+            </div>
+            <div class="bg-card text-card-foreground p-6 rounded-lg shadow-md">
+                <div class="flex justify-center mb-4">
+                    <img src="images/statistique.png" alt="Validation Icon" />
+                </div>
+                <h2 class="text-xl font-semibold text-center mb-2">Validation Challenge</h2>
+                <p class="text-center text-muted-foreground">Une fois le challenge acheté et vos identifiants reçus, nous procédons à la validation de votre compte acheté sur la Prop Firm.</p>
+            </div>
+            <div class="bg-card text-card-foreground p-6 rounded-lg shadow-md">
+                <div class="flex justify-center mb-4">
+                    <img src="images/poignee-de-main.png" alt="Financing Icon" />
+                </div>
+                <h2 class="text-xl font-semibold text-center mb-2">Financement</h2>
+                <p class="text-center text-muted-foreground">Une fois votre challenge réussi, vous recevrez votre compte financé que vous pouvez mettre en gestion chez nous (optionnel).</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Challenge Cards Section -->
+    <div class="flex-container">
+        <div class="card rounded-lg shadow-lg max-w-xs">
+            <div class="card-header">
+                <h2 class="text-lg font-bold primary-text">Compte 5k$ à 15k$</h2>
+            </div>
+            <div class="card-body">
+                <div class="price-container">
+                    <p class="price">200€</p>
+                    <p class="challenge-description">par challenge</p>
+                </div>
+                <ul class="my-4 space-y-2">
+                    <li class="flex items-center">
+                        <img src="images/jaccepte.png" alt="Check Icon" class="icon" />
+                        4 semaines en moyenne
+                    </li>
+                    <li class="flex items-center">
+                        <img src="images/jaccepte.png" alt="Check Icon" class="icon" />
+                        98% de succès
+                    </li>
+                    <li class="flex items-center">
+                        <img src="images/jaccepte.png" alt="Check Icon" class="icon" />
+                        Accompagnement 24h/7
+                    </li>
+                    <li class="flex items-center">
+                        <img src="images/traverser.png" alt="Cross Icon" class="icon" />
+                        Challenge sur la prop firm
+                    </li>
+                </ul>
+                <button class="secondary-bg text-secondary-text hover:bg-secondary-bg-hover">Valider le challenge</button>
+                <p class="muted-text mt-2">Remboursement en cas <br>d'échec</p>
+            </div>
+        </div>
+        <!-- Répétez la div .card pour chaque carte -->
+        <div class="card rounded-lg shadow-lg max-w-xs">
+            <div class="card-header">
+                <h2 class="text-lg font-bold primary-text">Compte 50.000$</h2>
+            </div>
+            <div class="card-body">
+                <div class="price-container">
+                    <p class="price">400€</p>
+                    <p class="challenge-description">par challenge</p>
+                </div>
+                <ul class="my-4 space-y-2">
+                    <li class="flex items-center">
+                        <img src="images/jaccepte.png" alt="Check Icon" class="icon" />
+                        4 semaines en moyenne
+                    </li>
+                    <li class="flex items-center">
+                        <img src="images/jaccepte.png" alt="Check Icon" class="icon" />
+                        98% de succès
+                    </li>
+                    <li class="flex items-center">
+                        <img src="images/jaccepte.png" alt="Check Icon" class="icon" />
+                        Accompagnement 24h/7
+                    </li>
+                    <li class="flex items-center">
+                        <img src="images/traverser.png" alt="Cross Icon" class="icon" />
+                        Challenge sur la prop firm
+                    </li>
+                </ul>
+                <button class="secondary-bg text-secondary-text hover:bg-secondary-bg-hover">Valider le challenge</button>
+                <p class="muted-text mt-2">Remboursement en cas <br>d'échec</p>
+            </div>
+        </div>
+        <div class="card rounded-lg shadow-lg max-w-xs">
+            <div class="card-header">
+                <h2 class="text-lg font-bold primary-text">Compte 100.000$</h2>
+            </div>
+            <div class="card-body">
+                <div class="price-container">
+                    <p class="price">500€</p>
+                    <p class="challenge-description">par challenge</p>
+                </div>
+                <ul class="my-4 space-y-2">
+                    <li class="flex items-center">
+                        <img src="images/jaccepte.png" alt="Check Icon" class="icon" />
+                        4 semaines en moyenne
+                    </li>
+                    <li class="flex items-center">
+                        <img src="images/jaccepte.png" alt="Check Icon" class="icon" />
+                        98% de succès
+                    </li>
+                    <li class="flex items-center">
+                        <img src="images/jaccepte.png" alt="Check Icon" class="icon" />
+                        Accompagnement 24h/7
+                    </li>
+                    <li class="flex items-center">
+                        <img src="images/traverser.png" alt="Cross Icon" class="icon" />
+                        Challenge sur la prop firm
+                    </li>
+                </ul>
+                <button class="secondary-bg text-secondary-text hover:bg-secondary-bg-hover">Valider le challenge</button>
+                <p class="muted-text mt-2">Remboursement en cas <br>d'échec</p>
+            </div>
+        </div>
+        <div class="card rounded-lg shadow-lg max-w-xs">
+            <div class="card-header">
+                <h2 class="text-lg font-bold primary-text">Compte 150.000$</h2>
+            </div>
+            <div class="card-body">
+                <div class="price-container">
+                    <p class="price">600€</p>
+                    <p class="challenge-description">par challenge</p>
+                </div>
+                <ul class="my-4 space-y-2">
+                    <li class="flex items-center">
+                        <img src="images/jaccepte.png" alt="Check Icon" class="icon" />
+                        4 semaines en moyenne
+                    </li>
+                    <li class="flex items-center">
+                        <img src="images/jaccepte.png" alt="Check Icon" class="icon" />
+                        98% de succès
+                    </li>
+                    <li class="flex items-center">
+                        <img src="images/jaccepte.png" alt="Check Icon" class="icon" />
+                        Accompagnement 24h/7
+                    </li>
+                    <li class="flex items-center">
+                        <img src="images/traverser.png" alt="Cross Icon" class="icon" />
+                        Challenge sur la prop firm
+                    </li>
+                </ul>
+                <button class="secondary-bg text-secondary-text hover:bg-secondary-bg-hover">Valider le challenge</button>
+                <p class="muted-text mt-2">Remboursement en cas <br>d'échec</p>
+            </div>
+        </div>
+        <div class="card rounded-lg shadow-lg max-w-xs">
+            <div class="card-header">
+                <h2 class="text-lg font-bold primary-text">Compte 200.000$</h2>
+            </div>
+            <div class="card-body">
+                <div class="price-container">
+                    <p class="price">700€</p>
+                    <p class="challenge-description">par challenge</p>
+                </div>
+                <ul class="my-4 space-y-2">
+                    <li class="flex items-center">
+                        <img src="images/jaccepte.png" alt="Check Icon" class="icon" />
+                        4 semaines en moyenne
+                    </li>
+                    <li class="flex items-center">
+                        <img src="images/jaccepte.png" alt="Check Icon" class="icon" />
+                        98% de succès
+                    </li>
+                    <li class="flex items-center">
+                        <img src="images/jaccepte.png" alt="Check Icon" class="icon" />
+                        Accompagnement 24h/7
+                    </li>
+                    <li class="flex items-center">
+                        <img src="images/traverser.png" alt="Cross Icon" class="icon" />
+                        Challenge sur la prop firm
+                    </li>
+                </ul>
+                <button class="secondary-bg text-secondary-text hover:bg-secondary-bg-hover">Valider le challenge</button>
+                <p class="muted-text mt-2">Remboursement en cas <br>d'échec</p>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-around bg-background p-4">
+        <div class="text-center">
+          <a href="URL_25k" class="text-primary">
+            <h2>Valider un compte 25k</h2>
+          </a>
+        </div>
+        <div class="text-center">
+          <a href="URL_300k" class="text-primary">
+            <h2>Valider un compte 300k</h2>
+          </a>
+        </div>
+        <div class="text-center">
+          <a href="URL_400k" class="text-primary">
+            <h2>Valider un compte 400k</h2>
+          </a>
+          <img id="img-payement" aria-hidden="true" alt="Payment methods for 400k" src="images/telechargement-jpeg.png" width="200" height="50" />
+        </div>
+        <div class="text-center">
+          <a href="URL_1million" class="text-primary">
+            <h2>Valider un compte 1 million</h2>
+          </a>
+        </div>
+      </div>
+      <div class="container2">
+        <div class="card2">
+          <h2>2/ Vérifiez votre inscription avec notre équipe</h2>
+          <p class="time-required">(Temps requis : 2 min)</p>
+          <p class="description">Envoyez le mot « Validation » via Telegram et un membre de notre équipe vous contactera dès que possible.</p>
+          <img aria-hidden="true" alt="Telegram Icon" src="images/telegram.png" class="icon2" />
+          <a href="https://t.me/propfirmfrance" class="secondary-button">Rejoindre notre canal</a>
+
+        </div>
+      
+        <div class="card2">
+          <h2>3/ Prenez votre challenge parmi ces Prop Firms</h2>
+          <p class="time-required">(Temps requis : 5 min)</p>
+          <p class="description">Choisissez le défi qui vous correspond. Contactez le support avant pour plus d’informations.</p>
+          <div class="grid">
+            <button class="btn" onclick="window.open('https://live.raisemyfunds.co/buy-challenge', '_blank')">Raisemyfunds</button>
+            <button class="btn" onclick="window.open('https://apextraderfunding.com/', '_blank')">Apex Trader</button>
+            <button class="btn" onclick="window.open('https://trading.infinityforexfunds.com/', '_blank')">Infinityforexfunds</button>
+            <button class="btn" onclick="window.open('https://www.sureleveragefunding.com/', '_blank')">Sure Leverage</button>
+            <button class="btn" onclick="window.open('https://ftmo.com/fr/', '_blank')">ftmo.com</button>
+            <button class="btn" onclick="window.open('https://protradefunded.com/fr/', '_blank')">Protradefunded</button>
+            <button class="btn" onclick="window.open('https://fundednext.com/fr', '_blank')">Fundednext</button>
+            <button class="btn" onclick="window.open('', '_blank')">Obtenir de l'aide</button>
+          </div>
+        </div>
+      </div>
+      <div class="container3">
+        <h1 class="title3">Votre partenaire de confiance pour la gestion de<br> compte</h1>
+      
+        <div class="content3">
+          <div class="card3">
+            <div class="icon-container">
+              <img src="images/poignee-de-main.png" alt="Gestion de Compte Icon" class="icon3" />
+            </div>
+            <h2 class="card3-title">Gestion De Compte</h2>
+            <p class="card3-text">
+              Trop d’échecs, pas assez de temps ? Déléguez votre compte Prop Firm : nous vous accompagnons dans la gestion de vos comptes avec une rémunération à hauteur de nos performances !
+            </p>
+          </div>
+      
+          <img src="images/phone-removebg-preview.png" alt="Mobile Portfolio" class="portfolio-image" />
+      
+          <div class="card3">
+            <div class="icon-container">
+              <img src="images/bouclier-de-securite (2).png" alt="Des Profits En Sécurité Icon" class="icon3" />
+            </div>
+            <h2 class="card3-title">Des Profits En Sécurité</h2>
+            <p class="card3-text">
+              Chez FundedTrader, notre objectif est de maximiser la sécurité de votre compte tout en maintenant une moyenne constante. Depuis 2017, nous faisons en moyenne 3% de rentabilité mensuel.
+            </p>
+          </div>
+        </div>
+      
+        <h2 class="subtitle3">Notre équipe est à votre <span class="highlight3">écoute</span> !</h2>
+        <div class="contact3-info">
+          <p>Les agents Funded Trader peuvent vous rappeler par téléphone du Lundi au<br> Vendredi de 10h00 à 19h00</p>
+          <button class="contact3-button" onclick="window.open('https://calendly.com/salakh12nice', '_blank')">
+
+            <span>📞 Contactez nos équipes</span>
+          </button>
+        </div>
+      </div>
+      <div class="container4">
+        <h2 id="retour" class="title4">Retour de nos clients</h2>
+        <p class="subtitle4">On laisse la parole à nos clients</p>
+        <div class="grid4">
+          <div class="card4">
+            <img class="clickable" src="images/c1.png" alt="certificate" />
+          </div>
+          <div class="card4">
+            <img class="clickable" src="images/c2.png" alt="client-feedback" />
+          </div>
+          <div class="card4">
+            <img class="clickable" src="images/c3.png" alt="client-chat" />
+          </div>
+          <div class="card4">
+            <img class="clickable" src="images/apex1.jpg" alt="client-testimonial" />
+          </div>
+          <div class="card4">
+            <img class="clickable" src="images/apex2.jpg" alt="feedback-screenshot" />
+          </div>
+          <div class="card4">
+            <img class="clickable" src="images/apex3.jpg" alt="client-response" />
+          </div>
+          <div class="card4">
+            <img class="clickable" src="images/apex4.jpg" alt="client-response" />
+          </div>
+          <div class="card4">
+            <img class="clickable" src="images/apex5.jpg" alt="client-response" />
+          </div>
+          <div class="card4">
+            <img class="clickable" src="images/apex6.jpg" alt="client-response" />
+          </div>
+        </div>
+        <button class="button4" onclick="document.getElementById('section1').scrollIntoView();">
+            <img src="images/fleche-droite-dans-un-cercle.png" alt="Icon" class="icon4">
+            Passez votre challenge
+        </button>
+      </div>
+    <div class="fullscreen-viewer" id="fullscreenViewer">
+        <span class="nav-button" id="prev">&lt;</span>
+        <img id="fullscreenImage" src="" alt="Image en plein écran">
+        <span class="nav-button" id="next">&gt;</span>
+        <span class="close-button" id="close">&times;</span>
+    </div>
+    <div class="container5">
+      <div class="card5">
+        <div class="image-section5">
+          <img src="images/apex1.jpg" alt="Message screenshot" class="image5" />
+        </div>
+        <div class="content-section5">
+          <h1 class="amount5">$14,000</h1>
+          <h2 class="subtitle5">De payout pour ce client</h2>
+          <p class="description5">Un jour, en naviguant sur YouTube, Tejas est tombé par hasard sur l’une de nos vidéos virales.</p>
+          <p class="description5">Intrigué, il nous a immédiatement contactés et a acheté un compte MyForexFunds de 100 000 $ pour que nous traitions son compte.</p>
+          <p class="description5">Le financement du compte a pris environ 2-3 semaines. Un mois plus tard, nous recevions notre premier versement.</p>
+          <p class="description5">Tejas n’en revenait pas : nous lui avions fait gagner plus de 11 000 $ en gérant son compte pour lui !</p>
+          <p class="description5">Pour fêter cette victoire, il a partagé la bonne nouvelle sur notre serveur Discord !</p>
+        </div>
+      </div>
+    </div>
+    <div class="container6">
+      <div class="grid-3">
+        <div class="card6">
+          <img src="images/p1.png" alt="FTMO Image 1" />
+        </div>
+        <div class="card6">
+          <img src="images/p7.png" alt="FTMO Image 2" />
+        </div>
+        <div class="card6">
+          <img src="images/p3.png" alt="FTMO Image 3" />
+        </div>
+        <div class="card6">
+          <img src="images/p1.png" alt="Chart 1" />
+        </div>
+        <div class="card6">
+          <img src="images/p5.png" alt="Chart 2" />
+        </div>
+        <div class="card6">
+          <img src="images/p6.png" alt="Chart 3" />
+        </div>
+      </div>
+      <div class="grid-6 mt-6">
+        <div class="card6">
+          <img src="images/4-1024x440.jpeg" alt="Chart 4" />
+        </div>
+        <div class="card6">
+          <img src="images/5-1024x439.jpeg" alt="Chart 5" />
+        </div>
+        <div class="card6">
+          <img src="images/WhatsApp-Image-2023-03-08-at-11.51.14-1024x440.jpeg" alt="Chart 6" />
+        </div>
+      </div>
+      <div class="button-container6">
+        <button class="cta-button6" onclick="document.getElementById('section1').scrollIntoView();">Passez votre challenge</button>
+      </div>
+    </div>
+    <div class="container7">
+      <h1 class="title7">Notre équipe est à votre <span class="highlight7">écoute !</span></h1>
+      <p class="description7">Les agents Xeilos Trader peuvent vous rappeler par téléphone du Lundi au Vendredi de 10h00 à 19h00</p>
+    </div>
+    <!-- Début de widget en ligne Calendly -->
+  <div class="calendly-inline-widget" data-url="https://calendly.com/salakh12nice" style="min-width:320px;height:700px;"></div>
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <!-- Fin de widget en ligne Calendly --> 
+  <div class="container8">
+    <div class="image-section8">
+      <div class="image-gallery8">
+        <div class="image-item8">
+          <div class="card8">
+            <img aria-hidden="true" alt="Image 1" src="images/Marc-antoine-150x150.png" class="card-img8" />
+          </div>
+        </div>
+        <div class="image-item8">
+          <div class="card8">
+            <img aria-hidden="true" alt="Image 2" src="images/gregory-150x150.png" class="card-img8" />
+          </div>
+        </div>
+        <div class="image-item8">
+          <div class="card8">
+            <img aria-hidden="true" alt="Image 3" src="images/Nehjmehdine-150x150.png" class="card-img8" />
+          </div>
+        </div>
+        <div class="image-item8">
+          <div class="card8">
+            <img aria-hidden="true" alt="Image 4" src="images/WhatsApp-Image.png" class="card-img8" />
+          </div>
+        </div>
+        <div class="image-item8">
+          <div class="card8">
+            <img aria-hidden="true" alt="Image 5" src="images/Daria-150x150.png" class="card-img8" />
+          </div>
+        </div>
+        <div class="image-item8">
+          <div class="card8">
+            <img aria-hidden="true" alt="Image 6" src="images/raphael-150x150.png" class="card-img8" />
+          </div>
+        </div>
+      </div>
+      <div class="additional-image8">
+        <img aria-hidden="true" alt="Additional Image" src="images/equipe.png" class="additional-img8" />
+      </div>
+    </div>
+    <div class="text-content8">
+      <h2 class="text-title8">Notre mission</h2>
+      <p class="text-paragraph8">Chez Xeilos Trader, nous avons fait le choix de collaborer uniquement<br> avec des traders professionnels et expérimentés.</p>
+      <p class="text-paragraph8">Ces traders aguerris cumulent des années d'expertise sur les marchés<br> financiers.</p>
+      <p class="text-paragraph8">Ce sont eux qui s'attaqueront aux challenges et géreront vos comptes<br> Prop Firms avec rigueur et expertise.</p>
+      <p class="text-paragraph8">En confiant vos comptes à Funded Trader, vous avez l'assurance de les<br> voir entre des mains expertes et dédiées à la réussite de vos<br> investissements.</p>
+      <div class="stats8">
+        <div class="stats-item8">
+          <p class="stat-value8">+90%</p>
+          <p class="stat-label8"><span class="highlight8">de comptes</span><br> avec payout</p>
+        </div>
+        
+        <div class="separator8"></div>
+        
+        <div class="stats-item8">
+          <p class="stat-value8">+1.5 M€</p>
+          <p class="stat-label8"><span class="highlight8">d’actifs</span><br> sous gestion</p>
+        </div>
+        
+        <div class="separator8"></div>
+        
+        <div class="stats-item8">
+          <p class="stat-value8">98%</p>
+          <p class="stat-label8"><span class="highlight8">de comptes</span><br> validés</p>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>  
+  <div class="container9">
+    <p class="subtitle9">Nos équipes s’engagent à vous accompagner</p> <!-- New subtitle -->
+    <h2 class="title9">Nos meilleurs experts francophones</h2>
+    
+    <div class="icons9">
+      <div class="icon-box9">
+        <img aria-hidden="true" alt="contenu exclusif" src="images/play.png" />
+      </div>
+      <div class="icon-box9">
+        <img aria-hidden="true" alt="FAQs en live" src="images/chat.png" />
+      </div>
+      <div class="icon-box9">
+        <img aria-hidden="true" alt="interviews" src="images/microphone.png" />
+      </div>
+    </div>
+  
+    <div class="experts9">
+      <div class="expert9">
+        <img src="images/Marc-antoine-150x150.png" alt="Anes B" class="expert-image9" />
+        <h3 class="expert-name9">Marc-Antoine</h3>
+        <p class="expert-role9">Formateur</p>
+        <p class="expert-description9">Expérimenté depuis des années sur les marchés financiers, Marc est le trader principal de Xeilos Trader sur les marchés indices et Forex. Il est également responsable de l'ensemble de la gestion des comptes prop firms après leur validation.</p>
+      </div>
+      <div class="expert9">
+        <img src="images/gregory-150x150.png" alt="Nathan B" class="expert-image9" />
+        <h3 class="expert-name9">Grégory</h3>
+        <p class="expert-role9">Co-Fondateur</p>
+        <p class="expert-description9">Grégory est le co-fondateur d'une entreprise de trading dynamique. Passionné par les marchés financiers depuis son jeune âge, il a su transformer sa passion en une carrière florissante.</p>
+      </div>
+      <div class="expert9">
+        <img src="images/Nehjmehdine-150x150.png" alt="John F" class="expert-image9" />
+        <h3 class="expert-name9">Nehjmehdine</h3>
+        <p class="expert-role9">Developpeur web</p>
+        <p class="expert-description9">Nehjmehdine est un développeur web talentueux et passionné, spécialisé dans la création de sites et d'applications web innovants. Avec une expertise en front-end et back-end, il maîtrise les technologies modernes telles que HTML, CSS, JavaScript, ainsi que divers frameworks comme React et Node.js.</p>
+      </div>
+      <div class="expert9">
+        <img src="images/Daria-150x150.png" alt="Killian G" class="expert-image9" />
+        <h3 class="expert-name9">Daria</h3>
+        <p class="expert-role9">Directrice marketing</p>
+        <p id="section2" class="expert-description9">Daria est la directrice marketing d'une entreprise innovante, où elle met à profit sa créativité et son expertise stratégique pour propulser la marque vers de nouveaux sommets.</p>
+      </div>
+    </div>
+  </div>
+  <div class="custom-card10">
+    <img
+      aria-hidden="true"
+      alt="Investisseurs Rentables"
+      src="images/Emvi_invest_2.png"
+      class="custom-image10"
+    />
+    <div class="custom-content10">
+      <h2 class="custom-subtitle10">Trading 2.0</h2>
+      <h3 class="custom-title10">Le pack INVEST</h3>
+      <p class="custom-description10">
+        Le Pack Investisseurs rentables réunit 6 formations de contenu vidéo. Retrouvez les formations Starter Trading, Trader rentable, Investisseur Pro, Initiation Prop firms, Daytrader Pro et Money Master.
+      </p>
+      <div class="custom-cta-container10">
+        <a href="#" class="custom-cta-button10">Découvrir l'offre</a>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="titre11">Accessible et éducatif</h1>
+    
+  <div class="container11">
+      <div class="card11">
+          <img src="images/monitor.png" alt="Formations En Ligne">
+          <h2>Formations En Ligne</h2>
+          <p>Quel que soit votre niveau, continuez constamment à vous former auprès de nos experts pour devenir un investisseur rentable.</p>
+      </div>
+      
+      <div class="card11">
+          <img src="images/telephone1.png" alt="Coachings Personnalisés">
+          <h2>Coachings Personnalisés</h2>
+          <p>Vous aurez accès à un accompagnement personnalisé de la part de nos coachs, pour atteindre vos objectifs lors des étapes de votre parcours.</p>
+      </div>
+      
+      <div class="card11">
+          <img src="images/infini.png" alt="Accès Gratuit À Vie">
+          <h2>Accès Gratuit À Vie</h2>
+          <p>Pas de système d'abonnement chaque mois. Profitez d'un accès total illimité à nos formations et partages d'investissements.</p>
+      </div>
+  </div>
+
+  <div class="button-container11">
+    <a href="#section2" class="btn11">Nos formations</a>
+</div>
+
+<div class="testimonial-container">
+  <h2 class="main-heading">
+      Ce que nos <span class="emphasized-text">Membres</span> Disent de nous
+  </h2>
+  
+  <div class="video-gallery-wrapper">
+      <div class="video-item-wrapper">
+          <iframe class="video-frame" src="https://www.youtube.com/embed/C1b2H5oKEyE?si=utlMvgrxIFYU8p5e" title="Témoignage vidéo 1" allowfullscreen></iframe>
+      </div>
+      <div class="video-item-wrapper">
+          <iframe class="video-frame" src="https://www.youtube.com/embed/3Xaq0P-VB0g?si=bM_-WVJYjNGZ47bu" title="Témoignage vidéo 2" allowfullscreen></iframe>
+      </div>
+      <div class="video-item-wrapper">
+          <iframe class="video-frame" src="https://www.youtube.com/embed/-mbfbZYtTnU?si=s6VshT12aboGdqjA" title="Témoignage vidéo 3" allowfullscreen></iframe>
+      </div>
+      <div class="video-item-wrapper">
+          <iframe class="video-frame" src="https://www.youtube.com/embed/Zm41_Wj-uNo?si=7O6EnkX6Sokzobt6" title="Témoignage vidéo 4" allowfullscreen></iframe>
+      </div>
+  </div>
+  
+  <!-- Carrousel des témoignages -->
+  <div class="testimonial-carousel-wrapper">
+      <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+      <div class="carousel-inner">
+          <div class="carousel-slide">
+              <p class="testimonial-content">
+                  Des formateurs vraiment pédagogues. Vos formations sur les cryptomonnaies sont très faciles à suivre et à assimiler. Vous dispensez vraiment un bon enseignement. Avec un peu d'assiduité, on peut qu'en ressortir gagnant et vos méthodes à la limite du "clé en main" sont top !
+              </p>
+              <div class="testimonial-author-info">
+                  <span class="author-name">Guillaume</span>
+                  <img class="author-image" src="images/1697460344686.jpg" alt="Photo de Guillaume" />
+              </div>
+          </div>
+          <!-- Ajoutez plus de slides ici -->
+          <div class="carousel-slide">
+              <p class="testimonial-content">Le meilleur cabinet de formation pour reprendre le contrôle de son épargne ! Vous suivez nos portefeuilles, vous êtes joignable dès que nous en avons besoin et ce n’est pas rien comme service client 😊</p>
+              <div class="testimonial-author-info">
+                  <span class="author-name">Noah</span>
+                  <img class="author-image" src="images/trader1.png" alt="Photo de Noah" />
+              </div>
+          </div>
+          <div class="carousel-slide">
+              <p class="testimonial-content">C’est avec grand plaisir que j’ai suivi vos formations sur le trading. J’ai pu mieux cerner de quelle façon augmenter mon capital gain et j’en suis ravi. Une belle qualité de formation à un prix raisonnable, ce qui se fait rare.</p>
+              <div class="testimonial-author-info">
+                  <span class="author-name">Seb</span>
+                  <img class="author-image" src="images/trader2.png" alt="Photo de Seb" />
+              </div>
+          </div>
+      </div>
+      <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+  
+  <div class="rating-section">
+      <span class="rating-text">Excellent</span>
+      <span class="star-icons">⭐⭐⭐⭐⭐</span>
+      <span class="rating-source-text">Trustpilot</span>
+  </div>
+</div>
+
+<script src="caroussel.js"></script>
+      
+<div class="container12">
+  <div id="coach" class="content12">
+    <h1 class="titre12">Coaching <span>&</span> Formation</h1>
+      <p class="text12">Suivez nos formations et nos partages d'investissement de manière quotidienne ou hebdomadaire sur des opportunités / investissements à court, moyen et long terme.</p>
+      <button class="cta-button12" onclick="document.getElementById('section2').scrollIntoView();">Je me lance ➔</button>
+  </div>
+  <div class="accordion12">
+      <div class="accordion-item12">
+          <button class="accordion-button12" onclick="toggleAccordion(this)">
+              Combien Coûte La Formation ?
+          </button>
+          <div class="accordion-content12">
+              <p>Nous sommes ravis de vous proposer notre formation gratuitement à<br> tous nos utilisateurs. Vous n’avez absolument pas besoin de dépenser <br>le moindre centime pour y accéder. Notre objectif est de vous offrir des<br> opportunités d’apprentissage gratuites afin d’améliorer vos<br> compétences. Pour bénéficier de cette offre, il vous suffit de remplir notre formulaire d’inscription en ligne. Ce formulaire est simple et rapide à remplir, et une fois que vous l’aurez soumis, vous aurez accès à nos formations en ligne. Nos formations en ligne répondent à un large éventail de sujets et sont conçues pour répondre aux besoins d’en apprendre plus dans le trading.</p>
+          </div>
+      </div>
+      <div class="accordion-item12">
+          <button class="accordion-button12" onclick="toggleAccordion(this)">
+              Combien De Temps Dure La Formation ?
+          </button>
+          <div class="accordion-content12">
+              <p>Notre formation dure une journée complète et comprend des modules d’apprentissage en ligne spécialement conçus. Ces modules reflètent différents aspects du sujet choisi et fournissent des informations claires et concises pour faciliter la compréhension. Vous bénéficierez également d’un entretien téléphonique individuel de 30 minutes avec un formateur pour poser vos questions spécifiques, approfondir certains sujets et obtenir des conseils personnalisés. Après la formation, nous assurons un suivi continu via des canaux de communication tels que des forums en ligne ou des groupes de discussion, vous permettant de rester connecté, de partager vos progrès, de poser des questions supplémentaires et de recevoir des conseils, même après la fin de la formation.</p>
+          </div>
+      </div>
+      <div class="accordion-item12">
+          <button class="accordion-button12" onclick="toggleAccordion(this)">
+              Comment Démarrer ?
+          </button>
+          <div class="accordion-content12" onclick="toggleAccordion(this)">
+              <p>Pour commencer la formation, vous devez vous inscrire sur notre site en remplissant un formulaire en ligne. Une fois inscrit, vous aurez un accès complet et gratuit à nos modules de formation en ligne. Ces modules sont conçus de manière pédagogique, avec des explications claires, des exemples pratiques et des exercices pour vous aider à comprendre et à appliquer les concepts du trading.</p>
+          </div>
+      </div>
+      <div class="accordion-item12">
+          <button class="accordion-button12" onclick="toggleAccordion(this)">
+              Quelles Connaissances Nécessaires Pour Démarrer ?
+          </button>
+          <div class="accordion-content12">
+              <p>Un débutant peut nous rejoindre avec peu de connaissances ! Nous sommes une équipe de professionnels expérimentés qui vous enseignent les bases du trading de manière pédagogique. Nous vous accompagnons pas à pas, en vous expliquant les concepts clés de manière claire et accessible. De plus, nos Traders vous envoient des alertes en temps réel sur les opportunités de trading intéressantes, vous permettant ainsi de suivre leurs stratégies et de prendre des décisions éclairées.</p>
+          </div>
+      </div>
+      <div class="accordion-item12">
+          <button class="accordion-button12" onclick="toggleAccordion(this)">
+              Quels Sont Les Marchés Sur Lesquels Trader ?
+          </button>
+          <div class="accordion-content12">
+              <p>On peut trader sur divers marchés, tels que le marché des actions, le marché des devises (Forex), le marché des matières premières (comme le pétrole ou l’or), le marché des indices (CAC40, DJ30) et le marché des cryptomonnaies.</p>
+          </div>
+      </div>
+      <div class="accordion-item12">
+          <button class="accordion-button12" onclick="toggleAccordion(this)">
+              Comment Fonctionne Le Trading En Ligne ?
+          </button>
+          <div class="accordion-content12">
+              <p>Le trading, également connu sous le nom de négociation, est une activité financière visant à réaliser des bénéfices en spéculant sur les marchés. Cette pratique implique l’achat et la vente d’une variété d’actifs, tels que des actions, des devises (Forex Trading ou Trading Forex), des matières premières et des cryptomonnaies, parmi d’autres. L’objectif principal du trading est de tirer parti des fluctuations des prix sur les marchés, à la hausse ou à la baisse.</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="container13">
+  <!-- Accordéon sur le côté gauche -->
+  <div class="accordion13">
+    <div class="accordion-item13">
+      <button class="accordion-button13" onclick="toggleAccordion(this)">
+        Combien de temps pour valider mon compte ?
+      </button>
+      <div class="accordion-content13">
+        <p>Sur un compte basique, nos traders mettent en moyenne 2 à 3 semaines pour valider votre compte, tandis que pour la validation HFT : généralement 2 jours.</p>
+      </div>
+    </div>
+    <div class="accordion-item13">
+      <button class="accordion-button13" onclick="toggleAccordion(this)">
+        Quel est la rentabilité mensuel moyenne ?
+      </button>
+      <div class="accordion-content13">
+        <p>En un mois, nos gains moyens se situent entre 3 à 4%.</p>
+      </div>
+    </div>
+    <div class="accordion-item13">
+      <button class="accordion-button13" onclick="toggleAccordion(this)">
+        Puis-je être remboursé si mon défi est perdu ?
+      </button>
+      <div class="accordion-content13">
+        <p>Si votre défi est perdu par notre faute, nous vous rembourserons la valeur du passage chez Funded Trader</p>
+      </div>
+    </div>
+    <div class="accordion-item13">
+      <button class="accordion-button13" onclick="toggleAccordion(this)">
+        Utilisez-vous des robots de trading ?
+      </button>
+      <div class="accordion-content13">
+        <p>Actuellement, hormis la validation HFT, tous nos trades sont manuels avec une utilisation régulée des logiciels de gestion EA.
+
+          Nous sommes encore en phase de développement de robots codés par nos soins.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenu principal sur le côté droit -->
+  <div class="content13">
+    <h1 class="titre13">Validation <span>Prop firms</span></h1>
+    <p class="text13">L’objectif de nos clients est à la fois simple et complexe : sécuriser leur capital tout en obtenant un rendement adéquat.<br><br>Cet objectif est devenu notre mission. Depuis plus de 4 ans, Funded Trader aide les investisseurs privés à préserver et à accroître leur patrimoine.</p>
+    <button class="cta-button13" onclick="document.getElementById('section2').scrollIntoView();">Passez mon Challenge ➔</button>
+  </div>
+</div>
+
+<div class="container14">
+  <div class="content14">
+    <h1 class="titre14">Fonctionnement <span>de</span> l'entreprise</h1>
+      <p class="text14">Nos gestionnaires de comptes utilisent systématiquement des stop-loss et des protecteurs d’actions.<br><br>Ces outils garantissent que votre compte ne dépasse jamais la limite quotidienne, préservant ainsi sa viabilité.</p>
+      <button class="cta-button14">Voir les offres de gestion ➔</button>
+  </div>
+  <div class="accordion14">
+      <div class="accordion-item14">
+          <button class="accordion-button14" onclick="toggleAccordion(this)">
+            Une gestion du risque est appliquée sur les comptes ?
+          </button>
+          <div class="accordion-content14">
+              <p>Oui, absolument. Nous planifions soigneusement les niveaux d’arrêt stop-loss (SL) appropriés pour nos transactions afin de nous assurer que les comptes soient toujours en règle et ne violent pas les règles de drawdown quotidien. Nous utilisons également la protection du capital sur tous les comptes comme mesure de sécurité supplémentaire.</p>
+          </div>
+      </div>
+      <div class="accordion-item14">
+          <button class="accordion-button14" onclick="toggleAccordion(this)">
+            Puis-je bénéficier d'une gestion de mon compte financé ?
+          </button>
+          <div class="accordion-content14">
+              <p>Après avoir reçu votre compte financé : 
+                <br>– vous pouvez gérer vous même votre compte,
+                <br>– ou faire appel à nos services pour l’une de nos offres sur cette page</p>
+          </div>
+      </div>
+      <div class="accordion-item14">
+          <button class="accordion-button14" onclick="toggleAccordion(this)">
+            Quelles sont les meilleures Prop Firms ?
+          </button>
+          <div class="accordion-content14">
+              <p>Nous avons travaillé avec succès avec les sociétés suivantes : Raise Mt Funds FTMO, The Funded Trader, TrueForexFunds, ThePropTrading.</p>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="footer-container" >
+  <div class="container20">
+    <div class="footer-grid">
+      <div class="footer-info">
+        <p>Xeilos Trading est un service de validation et gestion de comptes prop firm. Nous offrons des services de validation et gestion de comptes sur les meilleures prop firms. Devenez trader financé avec jusqu'à 200 000 $ sur votre compte de trading prop firm grâce à Xeilos Trading !</p>
+      </div>
+      
+      <!-- Nouvelle section pour les liens -->
+      <div class="footer-links-wrapper">
+        <div class="footer-links">
+          <a href="#" class="footer-link">Contact</a>
+          <a href="#" class="footer-link">FAQ</a>
+          <a href="#" class="footer-link">À propos</a>
+          <a href="#" class="footer-link">Blog</a>
+        </div>
+        <div class="footer-links">
+          <a href="#" class="footer-link">Inscription</a>
+          <a href="#" class="footer-link">Connexion</a>
+          <a href="#" class="footer-link">Réserver un appel</a>
+          <a href="#" class="footer-link">Affiliation</a>
+        </div>
+      </div>
+      
+      <!-- Section des cartes -->
+      <div class="footer-logos">
+        <div class="logo-card">
+          <img src="images/apex.png" alt="Apex Trader Funding">
+          <a href="https://apextraderfunding.com/" target="_blank" class="discover-button">Découvrir</a>
+        </div>
+        <div class="logo-card">
+          <img src="images/SLF.png" alt="Sure Leverage Funding">
+          <a href="https://sureleveragefunding.com/" target="_blank" class="discover-button">Découvrir</a>
+        </div>
+        <div class="logo-card">
+          <img src="images/raise2.png" alt="Raise">
+          <a href="https://raisemyfunds.co/fr/" target="_blank" class="discover-button">Découvrir</a>
+        </div>
+        <div class="logo-card">
+          <img src="images/infinity.png" alt="Infinity">
+          <a href="https://infinityforexfunds.com/" target="_blank" class="discover-button">Découvrir</a>
+        </div>
+        <div class="logo-card">
+          <img src="images/ftmo3.png" alt="FTMO">
+          <a href="https://ftmo.com/fr/" target="_blank" class="discover-button">Découvrir</a>
+        </div>
+        <div class="logo-card">
+          <img src="images/protrade.png" alt="ProTrade">
+          <a href="https://protradefunded.com/fr/" target="_blank" class="discover-button">Découvrir</a>
+        </div>
+      </div>
+      
+      <!-- Autres sections du footer -->
+      <div class="review-badges">
+        <span class="badge">Excellent</span>
+        <span class="badge">Trustpilot</span>
+      </div>
+      <div class="social-media">
+        <h2 class="social-title">Suivez-nous</h2>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><img src="images/facebook.png" alt="Facebook"></a>
+          <a href="#" class="social-icon"><img src="images/twitter.png" alt="Twitter"></a>
+          <a href="#" class="social-icon"><img src="images/instagram.png" alt="Instagram"></a>
+          <a href="#" class="social-icon"><img src="images/tik-tok.png" alt="Tiktok"></a>
+          <a href="#" class="social-icon"><img src="images/telegramme.png" alt="Telegram"></a>
+          <a href="#" class="social-icon"><img src="images/youtube.png" alt="Youtube"></a>
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        <p>Les CFD sont des instruments complexes et comportent un risque élevé de perte d'argent rapide en raison de l'effet de levier. 72% - 89% des comptes des investisseurs particuliers perdent de l'argent lorsqu'ils négocient des CFD avec ces fournisseurs. Vous devez vous demander si vous comprenez le fonctionnement des CFD et si vous pouvez vous permettre de prendre le risque élevé de perdre votre argent.</p>
+        <p>L'utilisation des services de validation Prop firm pour valider les conditions d'utilisation des plateformes de prop firm est entraînée des sanctions ou des pertes financières. Pour plus d'informations, consultez les conditions d'utilisation des plateformes de prop firm.</p>
+      </div>
+      
+      <div class="footer-credits">
+        <p>Copyright 2024 © Xeilos Trader - Mentions légales - Politique de Confidentialité - Conditions Générales de Vente</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="JavaScript/image.js" defer></script>
+<script src="JavaScript/onglet.js" defer></script>
+<script src="JavaScript/caroussel.js" defer></script>
+<script src="JavaScript/openimg.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+/* css pour footer*/
+/* Styles généraux pour le body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff; /* Blanc pour le texte principal */
+    background-color: #ffffff; /* Blanc pour l'arrière-plan */
+}
+
+/* Conteneur principal du footer */
+.bg-background {
+    background-color: #ffffff;
+    color: #ffffff;
+    min-height: 100vh;
+    background-image: url('images/background.png'); /* Remplacez par le chemin correct de votre image */
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir tout le conteneur */
+    background-position: center; /* Centre l'image dans le conteneur */
+}
+
+/* Styles pour les grilles et les colonnes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.container20{
+    max-width: 1200px;
+    height: 500px;
+}
+.grid {
+    display: grid;
+    width: 100%;
+}
+
+.grid-cols-1 {
+    grid-template-columns: 1fr;
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-cols-6 {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+/* Styles de texte */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.my-8 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.rounded {
+    border-radius: 0.5rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.space-y-2 > * {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hover\:underline:hover {
+    text-decoration: underline;
+}
+
+/* Styles pour les couleurs de fond et de texte */
+.bg-primary {
+    background-color: #4285f4; /* Bleu vif pour les boutons */
+    color: #ffffff; /* Blanc pour le texte principal */
+}
+
+.text-primary-foreground {
+    color: #ffffff; /* Blanc pour le texte principal */
+}
+
+.bg-secondary {
+    background-color: #f0f0f0;
+}
+
+.text-secondary-foreground {
+    color: #ffffff; /* Blanc pour le texte principal */
+}
+
+.bg-muted {
+    background-color: #f0f0f0;
+}
+
+.text-muted-foreground {
+    color: #757575; /* Gris pour le texte principal */
+}
+
+/* Styles spécifiques pour les cartes (modules) */
+.bg-card {
+    background-color: #222222; /* Gris foncé pour les modules */
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.bg-card a {
+    padding-left: 2rem; /* Padding à gauche */
+    padding-right: 2rem; /* Padding à droite */
+}
+
+.bg-card img {
+    max-width: 100%; /* Ajuste la largeur maximale des images */
+    margin: auto; /* Ajoute un espace en haut et en bas */
+    display: block; /* Assure que l'image est un élément de bloc */
+}
+
+.bg-card button {
+    background-color: #4285f4; /* Bleu vif pour les boutons */
+    color: #ffffff; /* Blanc pour le texte des boutons */
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem; /* Espace entre le bouton et l'image */
+    align-self: stretch; /* Étire le bouton pour qu'il prenne toute la largeur de son conteneur */
+    text-align: center; /* Centre le texte du bouton */
+}
+
+.bg-card button:hover {
+    background-color: #357ae8; /* Bleu légèrement plus foncé pour les boutons au survol */
+}
+
+/* Styles pour les textes de petite taille */
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-xs {
+    font-size: 0.75rem;
+}
+
+/* Autres styles d'espacement et de texte */
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.space-x-4 > * {
+    margin-left: 1rem;
+}
+
+.social-icon {
+    width: 24px; /* Ajuster la taille des icônes selon vos besoins */
+    height: 24px;
+}
